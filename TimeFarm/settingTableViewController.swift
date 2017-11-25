@@ -1,14 +1,14 @@
 //
-//  SettingPageViewController.swift
+//  settingTableViewController.swift
 //  TimeFarm
 //
-//  Created by apple on 2017/11/22.
+//  Created by apple on 2017/11/25.
 //  Copyright © 2017年 liu. All rights reserved.
 //
 
 import UIKit
-class SettingPageViewController:UIViewController{
-    @IBOutlet weak var settingTableView: UITableView!
+class settingTableViewController:UITableViewController{
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class MyHistoryViewController:UIViewController{
+class MyHistoryViewController:UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,5 +19,9 @@ class MyHistoryViewController:UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    @IBAction func clickShare(_ sender: UIBarButtonItem) {
+        print("going to share!")
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182DA65E1FC938C8000AAB71 /* settingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DA65D1FC938C8000AAB71 /* settingTableViewController.swift */; };
 		18535E471FC58D0F00D2E762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18535E461FC58D0F00D2E762 /* AppDelegate.swift */; };
 		18535E491FC58D0F00D2E762 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18535E481FC58D0F00D2E762 /* ViewController.swift */; };
 		18535E4C1FC58D0F00D2E762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18535E4A1FC58D0F00D2E762 /* Main.storyboard */; };
@@ -14,12 +15,12 @@
 		18535E511FC58D0F00D2E762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18535E4F1FC58D0F00D2E762 /* LaunchScreen.storyboard */; };
 		18535E5F1FC595B500D2E762 /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18535E5E1FC593F000D2E762 /* background.jpeg */; };
 		18535E611FC59A0000D2E762 /* settingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18535E601FC599FA00D2E762 /* settingIcon.png */; };
-		18535E631FC5A6D200D2E762 /* SettingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18535E621FC5A6D200D2E762 /* SettingPageViewController.swift */; };
 		18535E651FC5B3F900D2E762 /* ChooseSeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18535E641FC5B3F900D2E762 /* ChooseSeedViewController.swift */; };
 		18535E671FC5B45400D2E762 /* MyHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18535E661FC5B45400D2E762 /* MyHistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		182DA65D1FC938C8000AAB71 /* settingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingTableViewController.swift; sourceTree = "<group>"; };
 		18535E431FC58D0F00D2E762 /* TimeFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18535E461FC58D0F00D2E762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18535E481FC58D0F00D2E762 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		18535E521FC58D0F00D2E762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18535E5E1FC593F000D2E762 /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
 		18535E601FC599FA00D2E762 /* settingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingIcon.png; sourceTree = "<group>"; };
-		18535E621FC5A6D200D2E762 /* SettingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageViewController.swift; sourceTree = "<group>"; };
 		18535E641FC5B3F900D2E762 /* ChooseSeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSeedViewController.swift; sourceTree = "<group>"; };
 		18535E661FC5B45400D2E762 /* MyHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,9 +66,9 @@
 			children = (
 				18535E461FC58D0F00D2E762 /* AppDelegate.swift */,
 				18535E481FC58D0F00D2E762 /* ViewController.swift */,
-				18535E621FC5A6D200D2E762 /* SettingPageViewController.swift */,
 				18535E641FC5B3F900D2E762 /* ChooseSeedViewController.swift */,
 				18535E661FC5B45400D2E762 /* MyHistoryViewController.swift */,
+				182DA65D1FC938C8000AAB71 /* settingTableViewController.swift */,
 				18535E4A1FC58D0F00D2E762 /* Main.storyboard */,
 				18535E5C1FC5938E00D2E762 /* src */,
 				18535E4D1FC58D0F00D2E762 /* Assets.xcassets */,
@@ -161,8 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182DA65E1FC938C8000AAB71 /* settingTableViewController.swift in Sources */,
 				18535E491FC58D0F00D2E762 /* ViewController.swift in Sources */,
-				18535E631FC5A6D200D2E762 /* SettingPageViewController.swift in Sources */,
 				18535E651FC5B3F900D2E762 /* ChooseSeedViewController.swift in Sources */,
 				18535E471FC58D0F00D2E762 /* AppDelegate.swift in Sources */,
 				18535E671FC5B45400D2E762 /* MyHistoryViewController.swift in Sources */,
