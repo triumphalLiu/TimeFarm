@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class settingTableViewController:UITableViewController{
+class SettingTableViewController:UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()

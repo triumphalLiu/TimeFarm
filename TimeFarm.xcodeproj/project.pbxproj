@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		182DA65E1FC938C8000AAB71 /* settingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DA65D1FC938C8000AAB71 /* settingTableViewController.swift */; };
+		182414C01FC95956008BD2CF /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182414BF1FC9594F008BD2CF /* cities.plist */; };
+		182414C21FC959A0008BD2CF /* ChooseCityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182414C11FC959A0008BD2CF /* ChooseCityTableViewController.swift */; };
+		182DA65E1FC938C8000AAB71 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DA65D1FC938C8000AAB71 /* SettingTableViewController.swift */; };
 		182DA6671FC9544A000AAB71 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA6631FC9540E000AAB71 /* back.png */; };
 		182DA6681FC9544E000AAB71 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA6641FC9540E000AAB71 /* next.png */; };
 		182DA66A1FC95567000AAB71 /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA6691FC9555C000AAB71 /* land.png */; };
@@ -26,7 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		182DA65D1FC938C8000AAB71 /* settingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingTableViewController.swift; sourceTree = "<group>"; };
+		182414BF1FC9594F008BD2CF /* cities.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		182414C11FC959A0008BD2CF /* ChooseCityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityTableViewController.swift; sourceTree = "<group>"; };
+		182DA65D1FC938C8000AAB71 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		182DA6631FC9540E000AAB71 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		182DA6641FC9540E000AAB71 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		182DA6691FC9555C000AAB71 /* land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = land.png; sourceTree = "<group>"; };
@@ -78,9 +82,10 @@
 			children = (
 				18535E461FC58D0F00D2E762 /* AppDelegate.swift */,
 				18535E481FC58D0F00D2E762 /* ViewController.swift */,
+				182414C11FC959A0008BD2CF /* ChooseCityTableViewController.swift */,
 				18535E641FC5B3F900D2E762 /* ChooseSeedViewController.swift */,
 				18535E661FC5B45400D2E762 /* MyHistoryViewController.swift */,
-				182DA65D1FC938C8000AAB71 /* settingTableViewController.swift */,
+				182DA65D1FC938C8000AAB71 /* SettingTableViewController.swift */,
 				18535E4A1FC58D0F00D2E762 /* Main.storyboard */,
 				18535E5C1FC5938E00D2E762 /* src */,
 				18535E4D1FC58D0F00D2E762 /* Assets.xcassets */,
@@ -93,6 +98,7 @@
 		18535E5C1FC5938E00D2E762 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				182414BF1FC9594F008BD2CF /* cities.plist */,
 				182DA6631FC9540E000AAB71 /* back.png */,
 				182DA6641FC9540E000AAB71 /* next.png */,
 				182DA66B1FC955AE000AAB71 /* tomato.png */,
@@ -164,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182414C01FC95956008BD2CF /* cities.plist in Resources */,
 				182DA6701FC95749000AAB71 /* watermelon.png in Resources */,
 				182DA66F1FC95745000AAB71 /* grape.png in Resources */,
 				182DA66C1FC955B3000AAB71 /* tomato.png in Resources */,
@@ -185,7 +192,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182DA65E1FC938C8000AAB71 /* settingTableViewController.swift in Sources */,
+				182DA65E1FC938C8000AAB71 /* SettingTableViewController.swift in Sources */,
+				182414C21FC959A0008BD2CF /* ChooseCityTableViewController.swift in Sources */,
 				18535E491FC58D0F00D2E762 /* ViewController.swift in Sources */,
 				18535E651FC5B3F900D2E762 /* ChooseSeedViewController.swift in Sources */,
 				18535E471FC58D0F00D2E762 /* AppDelegate.swift in Sources */,
