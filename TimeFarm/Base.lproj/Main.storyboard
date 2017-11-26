@@ -238,7 +238,6 @@
                             <constraint firstItem="3U1-TQ-hOh" firstAttribute="leading" secondItem="sW5-q8-ln3" secondAttribute="leading" constant="13" id="Czm-Ey-eLd"/>
                             <constraint firstItem="sW5-q8-ln3" firstAttribute="trailing" secondItem="jBa-3x-KFx" secondAttribute="trailing" constant="16" id="DYT-MZ-35q"/>
                             <constraint firstItem="d2b-Uj-yoB" firstAttribute="top" secondItem="XIo-sR-mqF" secondAttribute="bottom" constant="41" id="E6h-wz-FiI"/>
-                            <constraint firstItem="d2b-Uj-yoB" firstAttribute="top" secondItem="XIo-sR-mqF" secondAttribute="bottom" constant="41" id="KNU-PO-9Zi"/>
                             <constraint firstItem="lP4-gC-tdN" firstAttribute="leading" secondItem="sW5-q8-ln3" secondAttribute="leading" constant="16" id="OCp-gb-kWU"/>
                             <constraint firstItem="5cX-Us-31o" firstAttribute="top" secondItem="lP4-gC-tdN" secondAttribute="bottom" constant="31" id="QSA-MV-rlf"/>
                             <constraint firstItem="jBa-3x-KFx" firstAttribute="leading" secondItem="sW5-q8-ln3" secondAttribute="leading" constant="16" id="Xsx-Xh-5LS"/>
@@ -333,7 +332,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Krk-51-Jtz" kind="show" id="dZ2-Pu-I9z"/>
+                                            <segue destination="ICM-DG-6Jr" kind="show" id="KdN-5N-jrf"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -549,50 +548,65 @@
             <point key="canvasLocation" x="301.60000000000002" y="-692.20389805097454"/>
         </scene>
         <!--城市列表-->
-        <scene sceneID="8CN-BN-Gu5">
+        <scene sceneID="UFi-T3-xfg">
             <objects>
-                <tableViewController id="Krk-51-Jtz" customClass="ChooseCityTableViewController" customModule="TimeFarm" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mvp-1U-0dh">
+                <tableViewController id="ICM-DG-6Jr" customClass="ChooseCityTableViewController" customModule="TimeFarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eop-8x-Kv9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="输入城市名或首字母" id="Bgb-jm-NMg">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="syC-XV-osF">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="Krk-51-Jtz" id="aLF-Hh-MIp"/>
+                                <outlet property="delegate" destination="ICM-DG-6Jr" id="5TV-sa-Qz1"/>
                             </connections>
                         </searchBar>
-                        <sections>
-                            <tableViewSection id="guD-jG-baj">
-                                <cells/>
-                            </tableViewSection>
-                        </sections>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChooseCityTableViewCell" id="9Vg-ZP-Ttg" customClass="ChooseCityTableViewCell" customModule="TimeFarm">
+                                <rect key="frame" x="0.0" y="84" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Vg-ZP-Ttg" id="VPN-ne-Nbd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nv4-kG-323">
+                                            <rect key="frame" x="8" y="0.0" width="359" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cityNameLabel" destination="Nv4-kG-323" id="Wz7-XI-SMr"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Krk-51-Jtz" id="yfn-64-m5O"/>
-                            <outlet property="delegate" destination="Krk-51-Jtz" id="fdM-rP-jXp"/>
+                            <outlet property="dataSource" destination="ICM-DG-6Jr" id="581-7e-ShZ"/>
+                            <outlet property="delegate" destination="ICM-DG-6Jr" id="Izi-F2-bs5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="城市列表" largeTitleDisplayMode="never" id="lWI-6W-zrS"/>
+                    <navigationItem key="navigationItem" title="城市列表" largeTitleDisplayMode="never" id="Maa-Ps-Vst"/>
                     <connections>
-                        <outlet property="CityTableView" destination="mvp-1U-0dh" id="6XG-fn-U2D"/>
-                        <outlet property="searchDisplayController" destination="Kmv-75-ysp" id="f9M-Q7-Fxf"/>
-                        <outlet property="tableView" destination="mvp-1U-0dh" id="hL2-bQ-3YF"/>
+                        <outlet property="searchDisplayController" destination="q4A-Xy-sxu" id="Zco-xn-B1k"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CHp-ni-Jxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="Kmv-75-ysp">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v8h-fZ-e74" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="q4A-Xy-sxu">
                     <connections>
-                        <outlet property="delegate" destination="Krk-51-Jtz" id="YlS-uB-YGv"/>
-                        <outlet property="searchBar" destination="Bgb-jm-NMg" id="XUc-iY-FMb"/>
-                        <outlet property="searchContentsController" destination="Krk-51-Jtz" id="mGc-j1-S9W"/>
-                        <outlet property="searchResultsDataSource" destination="Krk-51-Jtz" id="8Fo-ob-WN6"/>
-                        <outlet property="searchResultsDelegate" destination="Krk-51-Jtz" id="YWz-rc-Y8Y"/>
+                        <outlet property="delegate" destination="ICM-DG-6Jr" id="5mP-vc-d7m"/>
+                        <outlet property="searchBar" destination="syC-XV-osF" id="2uZ-Mg-t6o"/>
+                        <outlet property="searchContentsController" destination="ICM-DG-6Jr" id="81V-bN-6HP"/>
+                        <outlet property="searchResultsDataSource" destination="ICM-DG-6Jr" id="GTo-9b-W7n"/>
+                        <outlet property="searchResultsDelegate" destination="ICM-DG-6Jr" id="8I9-eT-xxz"/>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1392.8" y="-1006.1469265367317"/>
+            <point key="canvasLocation" x="1408.8" y="-1137.481259370315"/>
         </scene>
         <!--帮助-->
         <scene sceneID="eNG-Aa-XuT">
