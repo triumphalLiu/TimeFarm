@@ -7,8 +7,9 @@
 //
 
 import UIKit
-class ChooseCityTableViewController:UITableViewController{
+class ChooseCityViewController:UIViewController{
     
+    @IBOutlet weak var tableView: UITableView!
     //加载城市数据
     lazy var cityDic: [String: [String]] = { () -> [String : [String]] in
         let path = Bundle.main.path(forResource: "cities", ofType: "plist")
@@ -29,9 +30,10 @@ class ChooseCityTableViewController:UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(cityDic)
         print(titleArray)
-        tableView.sectionIndexBackgroundColor = UIColor.clear
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.tableView.sectionIndexBackgroundColor = UIColor.clear
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,20 +43,24 @@ class ChooseCityTableViewController:UITableViewController{
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
+}
+
+//table view扩展
+extension ChooseCityViewController: UITableViewDelegate ,UITableViewDataSource{
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return titleArray.count
     }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section > 0 {
             let key = titleArray[section]
-            return cityDic[key]!.count - 3
+            return cityDic[key]!.count
         }
         return 1
     }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseCityTableViewCell", for: indexPath) as! ChooseCityTableViewCell
         let key = titleArray[indexPath.section]
         if indexPath.section == 0 {
@@ -65,21 +71,21 @@ class ChooseCityTableViewController:UITableViewController{
         }
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         let cell = tableView.cellForRow(at: indexPath) as! ChooseCityTableViewCell
         print("点击了 \(cell.cityNameLabel.text)")
         //把值返回给上一层
     }
-    
+
     //右侧导航栏
-    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return titleArray
     }
-    
+
     //secton头
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 20))
         let title = UILabel(frame: CGRect(x: 12, y: 0, width: UIScreen.main.bounds.width - 12, height: 20))
         var titleArr = titleArray
@@ -91,8 +97,9 @@ class ChooseCityTableViewController:UITableViewController{
         view.backgroundColor = UIColor.gray
         return view
     }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 20
     }
 }
+
