@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXP-bc-xW3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXP-bc-xW3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -282,7 +282,7 @@
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o2e-ux-phr" id="cIs-QM-WcW">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前定位城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFP-Oe-dw7">
@@ -343,7 +343,7 @@
                                         <rect key="frame" x="0.0" y="115" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e7A-Nk-qPJ" id="9w8-nu-8Za">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="番茄钟时间设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsd-Ap-Guk">
@@ -555,23 +555,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="输入城市名或拼音" translatesAutoresizingMaskIntoConstraints="NO" id="whm-dM-2iQ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="OfD-Lq-14e"/>
-                                    <constraint firstAttribute="width" constant="375" id="qlS-ys-G3X"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="ggr-bO-OQB" id="787-KT-uhs"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qs0-bE-MMV">
-                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="547" id="5FJ-9v-EWu"/>
-                                    <constraint firstAttribute="width" constant="375" id="TOV-o5-jt6"/>
+                                    <constraint firstAttribute="height" constant="603" id="AOF-P2-mXQ"/>
+                                    <constraint firstAttribute="width" constant="375" id="jUD-CL-22L"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChooseCityTableViewCell" id="9Vg-ZP-Ttg" customClass="ChooseCityTableViewCell" customModule="TimeFarm">
@@ -599,34 +588,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Qs0-bE-MMV" firstAttribute="leading" secondItem="k0p-cE-AmW" secondAttribute="leading" id="04o-PG-CyX"/>
-                            <constraint firstItem="whm-dM-2iQ" firstAttribute="leading" secondItem="k0p-cE-AmW" secondAttribute="leading" id="0Ju-4R-Qz3"/>
-                            <constraint firstItem="Qs0-bE-MMV" firstAttribute="bottom" secondItem="k0p-cE-AmW" secondAttribute="bottom" id="NJ0-9O-sSo"/>
-                            <constraint firstItem="Qs0-bE-MMV" firstAttribute="top" secondItem="whm-dM-2iQ" secondAttribute="bottom" id="Q3O-0j-lJF"/>
-                            <constraint firstItem="whm-dM-2iQ" firstAttribute="top" secondItem="k0p-cE-AmW" secondAttribute="top" id="Vdg-wq-quv"/>
-                            <constraint firstItem="whm-dM-2iQ" firstAttribute="trailing" secondItem="k0p-cE-AmW" secondAttribute="trailing" id="kwh-2H-77X"/>
-                            <constraint firstItem="Qs0-bE-MMV" firstAttribute="trailing" secondItem="k0p-cE-AmW" secondAttribute="trailing" id="oiG-FH-pfY"/>
+                            <constraint firstItem="Qs0-bE-MMV" firstAttribute="trailing" secondItem="k0p-cE-AmW" secondAttribute="trailing" id="42b-Kq-Gwa"/>
+                            <constraint firstItem="Qs0-bE-MMV" firstAttribute="bottom" secondItem="k0p-cE-AmW" secondAttribute="bottom" id="aoZ-sb-Dre"/>
+                            <constraint firstItem="Qs0-bE-MMV" firstAttribute="leading" secondItem="k0p-cE-AmW" secondAttribute="leading" id="fwZ-pk-eAQ"/>
+                            <constraint firstItem="Qs0-bE-MMV" firstAttribute="top" secondItem="k0p-cE-AmW" secondAttribute="top" id="rO2-LR-fy4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k0p-cE-AmW"/>
                     </view>
                     <navigationItem key="navigationItem" title="城市列表" largeTitleDisplayMode="never" id="6Db-Qu-hjx"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="H8n-5e-ph9" id="pTD-lm-EMq"/>
                         <outlet property="tableView" destination="Qs0-bE-MMV" id="19F-li-DTN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="THG-SV-5eH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="H8n-5e-ph9">
-                    <connections>
-                        <outlet property="delegate" destination="ggr-bO-OQB" id="tcc-gA-Vt5"/>
-                        <outlet property="searchBar" destination="whm-dM-2iQ" id="Cmj-D6-D8g"/>
-                        <outlet property="searchContentsController" destination="ggr-bO-OQB" id="5yG-3E-G1G"/>
-                        <outlet property="searchResultsDataSource" destination="ggr-bO-OQB" id="3LA-em-RkS"/>
-                        <outlet property="searchResultsDelegate" destination="ggr-bO-OQB" id="ukC-Qj-LQB"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1396" y="-1090"/>
+            <point key="canvasLocation" x="1396" y="-1090.704647676162"/>
         </scene>
         <!--帮助-->
         <scene sceneID="eNG-Aa-XuT">
