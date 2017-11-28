@@ -275,6 +275,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <pickerView key="tableFooterView" alpha="0.0" contentMode="scaleToFill" id="9CS-hy-iLZ">
+                            <rect key="frame" x="0.0" y="417" width="375" height="186"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </pickerView>
                         <sections>
                             <tableViewSection footerTitle="" id="1yt-nN-P6v">
                                 <cells>
@@ -339,14 +343,14 @@
                             </tableViewSection>
                             <tableViewSection id="Rks-A0-Du4">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="e7A-Nk-qPJ" userLabel="番茄钟时间设置">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="e7A-Nk-qPJ" userLabel="番茄钟时间设置">
                                         <rect key="frame" x="0.0" y="115" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e7A-Nk-qPJ" id="9w8-nu-8Za">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e7A-Nk-qPJ" id="9w8-nu-8Za">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="番茄钟时间设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsd-Ap-Guk">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="番茄钟时间设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsd-Ap-Guk">
                                                     <rect key="frame" x="8" y="0.0" width="262" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="HUR-s1-lNq"/>
@@ -356,7 +360,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="专注时间必须为番茄钟时间的整数倍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWC-vB-2km">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="专注时间必须为番茄钟时间的整数倍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWC-vB-2km">
                                                     <rect key="frame" x="8" y="23" width="278" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="278" id="9PA-Fx-R6M"/>
@@ -366,25 +370,21 @@
                                                     <color key="textColor" red="0.78302180040000002" green="0.78302180040000002" blue="0.78302180040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25分钟" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he4-kD-93m">
-                                                    <rect key="frame" x="122" y="0.0" width="220" height="37"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="220" id="Xay-bd-xYE"/>
-                                                        <constraint firstAttribute="height" constant="37" id="cvD-0t-Ead"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" text="25分钟" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Faa-1B-G34">
+                                                    <rect key="frame" x="263" y="6" width="104" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    <connections>
+                                                        <action selector="startSettingTime:" destination="Rg3-Pp-kbp" eventType="editingDidBegin" id="rbg-C9-Y3W"/>
+                                                    </connections>
+                                                </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="he4-kD-93m" secondAttribute="trailing" id="EKe-ee-OMS"/>
                                                 <constraint firstAttribute="bottom" secondItem="wsd-Ap-Guk" secondAttribute="bottom" constant="12.5" id="FNU-gi-GqW"/>
                                                 <constraint firstItem="hWC-vB-2km" firstAttribute="leading" secondItem="9w8-nu-8Za" secondAttribute="leading" constant="8" id="JsP-wD-0fB"/>
-                                                <constraint firstAttribute="bottom" secondItem="he4-kD-93m" secondAttribute="bottom" constant="6.5" id="Lpm-UJ-jBQ"/>
-                                                <constraint firstItem="he4-kD-93m" firstAttribute="top" secondItem="9w8-nu-8Za" secondAttribute="top" id="VCL-SS-0nU"/>
                                                 <constraint firstItem="hWC-vB-2km" firstAttribute="top" secondItem="9w8-nu-8Za" secondAttribute="top" constant="23" id="Y6R-Om-69E"/>
-                                                <constraint firstItem="he4-kD-93m" firstAttribute="leading" secondItem="9w8-nu-8Za" secondAttribute="leading" constant="122" id="bDS-N5-hvH"/>
                                                 <constraint firstAttribute="bottom" secondItem="hWC-vB-2km" secondAttribute="bottom" constant="-0.5" id="lS8-Bh-6ce"/>
                                                 <constraint firstItem="wsd-Ap-Guk" firstAttribute="leading" secondItem="9w8-nu-8Za" secondAttribute="leading" constant="8" id="qlh-wZ-X8S"/>
                                                 <constraint firstAttribute="trailing" secondItem="hWC-vB-2km" secondAttribute="trailing" constant="56" id="wvg-6w-cW2"/>
@@ -541,7 +541,13 @@
                             <outlet property="delegate" destination="Rg3-Pp-kbp" id="iSx-iG-Xbc"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="设置" largeTitleDisplayMode="never" id="cTm-EF-whd"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pickerView" destination="9CS-hy-iLZ" id="OK0-Qn-DFK"/>
+                        <outlet property="timeTextField" destination="Faa-1B-G34" id="bgr-ea-KEz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ied-uj-8in" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -556,7 +562,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qs0-bE-MMV">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="603" id="AOF-P2-mXQ"/>
