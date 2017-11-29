@@ -156,21 +156,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cX-Us-31o">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cX-Us-31o" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="137" y="490" width="100" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.96786474206862549" blue="0.81265023629927935" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0KT-j6-9nR"/>
                                     <constraint firstAttribute="width" constant="100" id="em5-D2-jpV"/>
                                 </constraints>
                                 <state key="normal" title="开始">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="1" green="0.65505843460000002" blue="0.83574874830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickBeginDiscount:" destination="j4U-TZ-qOr" eventType="touchUpInside" id="x2C-ah-WIL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解锁状态" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP4-gC-tdN">
                                 <rect key="frame" x="16" y="438" width="343" height="21"/>
@@ -205,6 +209,9 @@
                                     <constraint firstAttribute="height" constant="50" id="xlw-Bx-vkm"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="back.png"/>
+                                <connections>
+                                    <action selector="clickChooseLast:" destination="j4U-TZ-qOr" eventType="touchUpInside" id="YjM-40-Jqo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uam-Ep-2y2" userLabel="Right">
                                 <rect key="frame" x="312" y="268" width="50" height="50"/>
@@ -213,6 +220,9 @@
                                     <constraint firstAttribute="height" constant="50" id="TzD-FS-g63"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="next.png"/>
+                                <connections>
+                                    <action selector="clickChooseNext:" destination="j4U-TZ-qOr" eventType="touchUpInside" id="NoI-V3-0Vx"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="land.png" translatesAutoresizingMaskIntoConstraints="NO" id="XIo-sR-mqF">
                                 <rect key="frame" x="112" y="245" width="158" height="107"/>
@@ -260,6 +270,15 @@
                         <viewLayoutGuide key="safeArea" id="sW5-q8-ln3"/>
                     </view>
                     <navigationItem key="navigationItem" title="选择作物" largeTitleDisplayMode="never" id="mfW-fe-e2H"/>
+                    <connections>
+                        <outlet property="chooseLast" destination="3U1-TQ-hOh" id="LdD-wT-EtT"/>
+                        <outlet property="chooseNext" destination="Uam-Ep-2y2" id="uBI-aP-37W"/>
+                        <outlet property="needLabel" destination="d2b-Uj-yoB" id="GhV-wi-6FY"/>
+                        <outlet property="setSeedPicView" destination="blY-Pe-oDg" id="O2C-Qc-qVt"/>
+                        <outlet property="setTimeLabel" destination="jBa-3x-KFx" id="qB2-k7-5f2"/>
+                        <outlet property="startButton" destination="5cX-Us-31o" id="XcK-ik-tja"/>
+                        <outlet property="unlockLabel" destination="lP4-gC-tdN" id="DrQ-VA-iZN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JtJ-9J-m3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
