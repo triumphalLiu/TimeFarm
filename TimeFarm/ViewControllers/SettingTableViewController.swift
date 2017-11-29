@@ -27,7 +27,7 @@ class SettingTableViewController:UITableViewController{
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         timeTextField.text = String(tomatoTime) + "分钟"
         cityLabel.text = currentCity
-        notdisturbButton.isOn = isNotDisterb
+        notdisturbButton.isOn = isNotDisturb
         pauseButton.isOn = isPaused
     }
     
@@ -70,7 +70,7 @@ class SettingTableViewController:UITableViewController{
     
     //免打扰按钮
     @IBAction func clickNotdisturbButton(_ sender: UISwitch) {
-        isNotDisterb = notdisturbButton.isOn
+        isNotDisturb = notdisturbButton.isOn
     }
 }
 
