@@ -95,17 +95,13 @@
 		18535E451FC58D0F00D2E762 /* TimeFarm */ = {
 			isa = PBXGroup;
 			children = (
+				18BA9D071FCEA4440038F228 /* Storyboards */,
+				18BA9D061FCEA4280038F228 /* DataDealing */,
+				18BA9D051FCEA3E90038F228 /* ViewControllers */,
 				182A21F41FCD70CE0086B5CB /* ChooseCity */,
 				18535E461FC58D0F00D2E762 /* AppDelegate.swift */,
-				18B5FECE1FCE71630027DE26 /* GlobalData.swift */,
-				18535E481FC58D0F00D2E762 /* ViewController.swift */,
-				18535E641FC5B3F900D2E762 /* ChooseSeedViewController.swift */,
-				18535E661FC5B45400D2E762 /* MyHistoryViewController.swift */,
-				182DA65D1FC938C8000AAB71 /* SettingTableViewController.swift */,
-				18535E4A1FC58D0F00D2E762 /* Main.storyboard */,
 				18535E5C1FC5938E00D2E762 /* src */,
 				18535E4D1FC58D0F00D2E762 /* Assets.xcassets */,
-				18535E4F1FC58D0F00D2E762 /* LaunchScreen.storyboard */,
 				18535E521FC58D0F00D2E762 /* Info.plist */,
 			);
 			path = TimeFarm;
@@ -126,6 +122,34 @@
 				18535E5E1FC593F000D2E762 /* background.jpeg */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		18BA9D051FCEA3E90038F228 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18535E481FC58D0F00D2E762 /* ViewController.swift */,
+				18535E641FC5B3F900D2E762 /* ChooseSeedViewController.swift */,
+				18535E661FC5B45400D2E762 /* MyHistoryViewController.swift */,
+				182DA65D1FC938C8000AAB71 /* SettingTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		18BA9D061FCEA4280038F228 /* DataDealing */ = {
+			isa = PBXGroup;
+			children = (
+				18B5FECE1FCE71630027DE26 /* GlobalData.swift */,
+			);
+			path = DataDealing;
+			sourceTree = "<group>";
+		};
+		18BA9D071FCEA4440038F228 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				18535E4A1FC58D0F00D2E762 /* Main.storyboard */,
+				18535E4F1FC58D0F00D2E762 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

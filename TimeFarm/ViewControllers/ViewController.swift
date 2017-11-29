@@ -96,7 +96,7 @@ class ViewController: UIViewController {
         else if(currentSeedNum == 2) {currentGrape+=1}
         else if(currentSeedNum == 3){currentWaterMelon+=1}
         
-        var msg : String = "专注失败，你本次获得了:"
+        var msg : String = "专注成功，你本次获得了:"
         msg.append("1000块")
         let alertController=UIAlertController(title: "专注完成", message: msg, preferredStyle: UIAlertControllerStyle.alert)
         let okAction=UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler:nil)
