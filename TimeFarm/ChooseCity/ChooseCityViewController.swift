@@ -55,7 +55,7 @@ class ChooseCityViewController:UIViewController{
         self.ChooseCitySearchController = ({
             let controller = UISearchController(searchResultsController: nil)
             controller.searchResultsUpdater = self
-            controller.hidesNavigationBarDuringPresentation = false
+            controller.hidesNavigationBarDuringPresentation = true
             controller.dimsBackgroundDuringPresentation = false
             controller.searchBar.searchBarStyle = .minimal
             controller.searchBar.sizeToFit()
@@ -123,7 +123,7 @@ extension ChooseCityViewController: UITableViewDelegate ,UITableViewDataSource{
         else {
             let key = titleArray[indexPath.section]
             if indexPath.section == 0 {
-                cell.cityNameLabel!.text = "当前定位"
+                cell.cityNameLabel!.text = "定位城市"
             }
             else {
                 cell.cityNameLabel.text = cityDic[key]?[indexPath.row]
@@ -135,8 +135,12 @@ extension ChooseCityViewController: UITableViewDelegate ,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         let cell = tableView.cellForRow(at: indexPath) as! ChooseCityTableViewCell
-        print("点击了 \(cell.cityNameLabel.text)")
-        //把值返回给上一层
+        currentCity = cell.cityNameLabel.text!
+        if(ChooseCitySearchController.isActive) {
+            self.ChooseCitySearchController.searchBar.resignFirstResponder()
+            self.ChooseCitySearchController.isActive = false
+        }
+        self.navigationController?.popViewController(animated: true)
     }
 
     //右侧导航栏

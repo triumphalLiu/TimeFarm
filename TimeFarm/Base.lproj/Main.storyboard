@@ -285,7 +285,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前定位城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFP-Oe-dw7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFP-Oe-dw7">
                                                     <rect key="frame" x="8" y="0.0" width="268" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="Ibl-fv-RaX"/>
@@ -432,6 +432,9 @@
                                                         <constraint firstAttribute="height" constant="31" id="8w9-z2-1mW"/>
                                                         <constraint firstAttribute="width" constant="49" id="hhK-Sg-MXp"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="clickPauseButton:" destination="Rg3-Pp-kbp" eventType="valueChanged" id="HMK-jV-Z5R"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -479,12 +482,15 @@
                                                     <color key="textColor" red="0.78302180040000002" green="0.78302180040000002" blue="0.78302180040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3me-3w-dTu">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3me-3w-dTu">
                                                     <rect key="frame" x="303" y="6" width="49" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="47" id="dI0-GJ-IiP"/>
                                                         <constraint firstAttribute="height" constant="31" id="zCd-Lz-FB7"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="clickNotdisturbButton:" destination="Rg3-Pp-kbp" eventType="valueChanged" id="ods-P4-yNw"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -548,6 +554,9 @@
                     <navigationItem key="navigationItem" title="设置" largeTitleDisplayMode="never" id="cTm-EF-whd"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="cityLabel" destination="Mb5-rU-Bbe" id="2jo-8d-992"/>
+                        <outlet property="notdisturbButton" destination="3me-3w-dTu" id="dyx-Si-z73"/>
+                        <outlet property="pauseButton" destination="m15-T0-sRS" id="NRJ-Ab-uxi"/>
                         <outlet property="timeTextField" destination="Faa-1B-G34" id="bgr-ea-KEz"/>
                     </connections>
                 </tableViewController>
