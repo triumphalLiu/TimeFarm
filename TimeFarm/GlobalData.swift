@@ -21,3 +21,4 @@ var currentGrape : Int = 0
 var currentWaterMelon : Int = 0 //当前成就
 
 var isDiscountBegin : Bool = false //是否已经开始倒计时
+var discountTime : Int = 0 //倒计时时间

@@ -21,14 +21,14 @@ class ChooseSeedViewController:UIViewController{
         setTimeLabel.text = String(tomatoTime) + " : 00"
         setSeedPicView.image = UIImage(named: seedList[currentSeedNum])
         if(currentSeedNum == 0){
-            chooseLast.isEnabled = false
+            chooseLast.isHidden = true
         }else{
-            chooseLast.isEnabled = true
+            chooseLast.isHidden = false
         }
         if(currentSeedNum == 2){
-            chooseNext.isEnabled = false
+            chooseNext.isHidden = true
         }else{
-            chooseLast.isEnabled = true
+            chooseNext.isHidden = false
         }
         checkUnlock()
     }
@@ -70,27 +70,28 @@ class ChooseSeedViewController:UIViewController{
     }
     
     @IBAction func clickChooseNext(_ sender: UIButton) {
-        chooseLast.isEnabled = true
+        chooseLast.isHidden = false
         currentSeedNum = currentSeedNum + 1
         setSeedPicView.image = UIImage(named: seedList[currentSeedNum])
         if(currentSeedNum == 2){
-            chooseNext.isEnabled = false
+            chooseNext.isHidden = true
         }
         checkUnlock()
     }
     
     @IBAction func clickChooseLast(_ sender: UIButton) {
-        chooseNext.isEnabled = true
+        chooseNext.isHidden = false
         currentSeedNum = currentSeedNum - 1
         setSeedPicView.image = UIImage(named: seedList[currentSeedNum])
         if(currentSeedNum == 0){
-            chooseLast.isEnabled = false
+            chooseLast.isHidden = true
         }
         checkUnlock()
     }
     
     @IBAction func clickBeginDiscount(_ sender: UIButton) {
         isDiscountBegin = true
+        discountTime = tomatoTime * 60
         self.navigationController?.popViewController(animated: true)
     }
 }

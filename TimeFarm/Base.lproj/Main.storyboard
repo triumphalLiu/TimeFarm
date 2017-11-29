@@ -77,7 +77,7 @@
                                     <color key="titleColor" red="0.78823529411764703" green="0.67843137254901964" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="j4U-TZ-qOr" kind="show" id="bUy-Ea-C0E"/>
+                                    <action selector="clickChooseSeedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M8z-MR-pGe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aD-bk-fsd" userLabel="仓库按钮">
@@ -115,7 +115,9 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="MTj-TZ-Nf3"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="chooseSeedButton" destination="CYx-wY-URX" id="gJA-Nc-CLU"/>
                         <outlet property="timeLabel" destination="6Sf-GZ-2XO" id="oJu-KU-Ehc"/>
+                        <segue destination="j4U-TZ-qOr" kind="show" identifier="showChooseSeed" id="79y-F7-9NE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -202,7 +204,7 @@
                                 <color key="textColor" red="0.78823529410000004" green="0.67843137249999996" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3U1-TQ-hOh" userLabel="Left">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3U1-TQ-hOh" userLabel="Left">
                                 <rect key="frame" x="13" y="268" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="c8H-w7-NqM"/>
