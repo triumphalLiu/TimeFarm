@@ -21,14 +21,14 @@ class ChooseSeedViewController:UIViewController{
         setTimeLabel.text = String(tomatoTime) + " : 00"
         setSeedPicView.image = UIImage(named: seedList[currentSeedNum])
         if(currentSeedNum == 0){
-            chooseLast.isHidden = true
+            chooseLast.isEnabled  = false
         }else{
-            chooseLast.isHidden = false
+            chooseLast.isEnabled  = true
         }
         if(currentSeedNum == 2){
-            chooseNext.isHidden = true
+            chooseNext.isEnabled  = false
         }else{
-            chooseNext.isHidden = false
+            chooseNext.isEnabled  = true
         }
         checkUnlock()
     }
@@ -70,21 +70,21 @@ class ChooseSeedViewController:UIViewController{
     }
     
     @IBAction func clickChooseNext(_ sender: UIButton) {
-        chooseLast.isHidden = false
+        chooseLast.isEnabled  = true
         currentSeedNum = currentSeedNum + 1
         setSeedPicView.image = UIImage(named: seedList[currentSeedNum])
         if(currentSeedNum == 2){
-            chooseNext.isHidden = true
+            chooseNext.isEnabled  = false
         }
         checkUnlock()
     }
     
     @IBAction func clickChooseLast(_ sender: UIButton) {
-        chooseNext.isHidden = false
+        chooseNext.isEnabled  = true
         currentSeedNum = currentSeedNum - 1
         setSeedPicView.image = UIImage(named: seedList[currentSeedNum])
         if(currentSeedNum == 0){
-            chooseLast.isHidden = true
+            chooseLast.isEnabled  = false
         }
         checkUnlock()
     }
