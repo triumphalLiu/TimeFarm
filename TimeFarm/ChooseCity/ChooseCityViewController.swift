@@ -7,8 +7,14 @@
 //
 
 import UIKit
-class ChooseCityViewController:UIViewController{
+import CoreLocation
+
+class ChooseCityViewController:UIViewController, CLLocationManagerDelegate{
     
+    var LocCity : String = currentCity
+    
+    var currLoc : CLLocation! = CLLocation()
+    let locationManager : CLLocationManager = CLLocationManager()
     
     @IBOutlet weak var tableView: UITableView!
     //加载城市数据
@@ -48,6 +54,9 @@ class ChooseCityViewController:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getLocation()
+        
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.sectionIndexBackgroundColor = UIColor.clear
@@ -65,6 +74,44 @@ class ChooseCityViewController:UIViewController{
         })()
     }
     
+    //获取位置
+    private func getLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 100
+        locationManager.requestAlwaysAuthorization()
+        if (CLLocationManager.locationServicesEnabled())
+        {
+            locationManager.startUpdatingLocation()
+        }else{
+            LocCity = "定位失败"
+        }
+    }
+    
+    //位置更新
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currLoc = locations.last!
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(currLoc, completionHandler: {
+            (placemarks:[CLPlacemark]?, error:Error?) -> Void in
+            print("\(self.currLoc.coordinate.latitude),\(self.currLoc.coordinate.longitude)")
+            let array = NSArray(object: "zh-hans")
+            UserDefaults.standard.set(array, forKey: "AppleLanguages")
+            if error != nil {
+                self.LocCity = "定位失败"
+                return
+            }
+            if let p = placemarks?[0]{
+                if var locality = p.locality {
+                    locality = locality.replacingOccurrences(of: "市", with: "")
+                    self.LocCity = locality
+                    let locCityCell : ChooseCityTableViewCell = (self.tableView.cellForRow(at: [0,0])) as! ChooseCityTableViewCell
+                    locCityCell.cityNameLabel.text = self.LocCity
+                }
+            }
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -76,6 +123,7 @@ class ChooseCityViewController:UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         self.tableView.reloadData()
+        getLocation()
     }
 }
 
@@ -123,7 +171,7 @@ extension ChooseCityViewController: UITableViewDelegate ,UITableViewDataSource{
         else {
             let key = titleArray[indexPath.section]
             if indexPath.section == 0 {
-                cell.cityNameLabel!.text = "定位城市"
+                cell.cityNameLabel!.text = LocCity
             }
             else {
                 cell.cityNameLabel.text = cityDic[key]?[indexPath.row]

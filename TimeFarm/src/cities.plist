@@ -19,6 +19,7 @@
 		<string>安溪</string>
 		<string>安阳</string>
 		<string>安岳</string>
+		<string>澳门</string>
 	</array>
 	<key>B</key>
 	<array>
@@ -668,7 +669,7 @@
 		<string>孝义</string>
 		<string>霞浦</string>
 		<string>夏邑</string>
-		<string>锡林郭勒</string>
+		<string>锡林郭勒盟</string>
 		<string>新安</string>
 		<string>兴安盟</string>
 		<string>兴城</string>
@@ -702,6 +703,7 @@
 		<string>徐闻</string>
 		<string>盱眙</string>
 		<string>徐州</string>
+		<string>香港</string>
 	</array>
 	<key>Y</key>
 	<array>
