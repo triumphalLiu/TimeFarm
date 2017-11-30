@@ -24,3 +24,5 @@ let seedList : [String] = ["tomato.png", "grape.png", "watermelon.png"]
 var isPaused : Bool = false //初始非特殊情况暂停
 var isDiscountBegin : Bool = false //是否已经开始倒计时
 var discountTime : Int = 0 //倒计时时间
+var lockTime : Date! //锁屏的时间
+var resumeTime : Date! //恢复的时间

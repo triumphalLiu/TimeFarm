@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         //正确显示时间
-        if(isDiscountBegin){
+        if(isDiscountBegin && discountTime >= 0){
             if(discountTime % 60 < 10){
                 timeLabel.text = String(discountTime / 60) + " : 0" + String(discountTime % 60)
             }else{
@@ -96,39 +96,43 @@ class ViewController: UIViewController {
         if(isDiscountBegin){
             chooseSeedButton.setTitle("放弃专注", for: UIControlState.normal)
             discountTime = discountTime - 1
-            if(discountTime % 60 < 10){
-                timeLabel.text = String(discountTime / 60) + " : 0" + String(discountTime % 60)
-            }else{
-                timeLabel.text = String(discountTime / 60) + " : " + String(discountTime % 60)
-            }
-            if(discountTime == 0){
+            if(discountTime <= 0){
                 self.seedSucc()
+            }
+            else{
+                if(discountTime % 60 < 10){
+                    timeLabel.text = String(discountTime / 60) + " : 0" + String(discountTime % 60)
+                }else{
+                    timeLabel.text = String(discountTime / 60) + " : " + String(discountTime % 60)
+                }
             }
         }
     }
     
     //种植失败
-    private func seedFail() {
-        isDiscountBegin = false
-        self.timeLabel.text = String(tomatoTime) + " : 00"
-        chooseSeedButton.setTitle("选择种子", for: UIControlState.normal)
-        if(currentSeedNum == 1) {if(currentTomato > 0){currentTomato-=1}}
-        else if(currentSeedNum == 2) {if(currentGrape > 0){currentGrape-=1}}
-        else if(currentSeedNum == 3){if(currentWaterMelon > 0){currentWaterMelon-=1}}
-        
-        var msg : String = "专注失败，你本次失去了:"
-        msg.append("1000块")
-        let alertController=UIAlertController(title: "专注失败", message: msg, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction=UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler:nil)
-        alertController.addAction(okAction)
-        self.present(alertController, animated : true,completion : nil)
-        
-        pushNotification(title: "专注失败", body: "由于你的不专心，作物已经死亡。")
-        //log
+    func seedFail() {
+        if(isDiscountBegin){
+            isDiscountBegin = false
+            self.timeLabel.text = String(tomatoTime) + " : 00"
+            chooseSeedButton.setTitle("选择种子", for: UIControlState.normal)
+            if(currentSeedNum == 1) {if(currentTomato > 0){currentTomato-=1}}
+            else if(currentSeedNum == 2) {if(currentGrape > 0){currentGrape-=1}}
+            else if(currentSeedNum == 3){if(currentWaterMelon > 0){currentWaterMelon-=1}}
+            
+            var msg : String = "专注失败，你本次失去了:"
+            msg.append("1000块")
+            let alertController=UIAlertController(title: "专注失败", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+            let okAction=UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler:nil)
+            alertController.addAction(okAction)
+            self.present(alertController, animated : true,completion : nil)
+            
+            pushNotification(title: "专注失败", body: "由于你的不专心，作物已经死亡。")
+            //log
+        }
     }
     
     //种植成功
-    private func seedSucc() {
+    func seedSucc() {
         isDiscountBegin = false
         self.timeLabel.text = String(tomatoTime) + " : 00"
         chooseSeedButton.setTitle("选择种子", for: UIControlState.normal)
@@ -151,7 +155,7 @@ class ViewController: UIViewController {
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = body
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
         let requestIdentifier = "Notification"
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { error in}
