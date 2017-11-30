@@ -31,6 +31,7 @@
 		18BA9D0B1FCEACA70038F228 /* userList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BA9D0A1FCEACA70038F228 /* userList.plist */; };
 		18C610961FCA9D1A0008C96B /* ChooseCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C610951FCA9D1A0008C96B /* ChooseCityTableViewCell.swift */; };
 		18E753C81FCFD51F00453629 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182414BF1FC9594F008BD2CF /* cities.plist */; };
+		18E753CA1FCFDD5B00453629 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E753C91FCFDD5B00453629 /* UserNotifications.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		18BA9D081FCEA4B00038F228 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		18BA9D0A1FCEACA70038F228 /* userList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = userList.plist; sourceTree = "<group>"; };
 		18C610951FCA9D1A0008C96B /* ChooseCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityTableViewCell.swift; sourceTree = "<group>"; };
+		18E753C91FCFDD5B00453629 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E753CA1FCFDD5B00453629 /* UserNotifications.framework in Frameworks */,
 				189BEF0F1FCEF03F00CBA76F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +139,7 @@
 		189BEF0D1FCEF03E00CBA76F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18E753C91FCFDD5B00453629 /* UserNotifications.framework */,
 				189BEF0E1FCEF03F00CBA76F /* MapKit.framework */,
 			);
 			name = Frameworks;

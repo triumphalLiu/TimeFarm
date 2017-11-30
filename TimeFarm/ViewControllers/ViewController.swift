@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
         self.navigationItem.title = ""
         chooseSeedButton.setTitle("选择种子", for: UIControlState.normal)
         discountTimer = Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: #selector(tickDown1s), userInfo: nil, repeats: true)
+        askForNotification()
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +47,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        //正确显示时间
         if(isDiscountBegin){
             if(discountTime % 60 < 10){
                 timeLabel.text = String(discountTime / 60) + " : 0" + String(discountTime % 60)
@@ -56,6 +59,39 @@ class ViewController: UIViewController {
         }
     }
     
+    //请求允许通知
+    private func askForNotification() {
+        UNUserNotificationCenter.current().getNotificationSettings {
+            settings in
+            switch settings.authorizationStatus {
+            case .authorized:
+                return
+            case .notDetermined:
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {(accepted, error) in}
+            case .denied:
+                DispatchQueue.main.async(execute: { () -> Void in
+                    let alertController = UIAlertController(title: "消息推送已关闭", message: "打开通知能获取最新消息哦～", preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title:"取消", style: .cancel, handler:nil)
+                    let settingsAction = UIAlertAction(title:"设置", style: .default, handler: {
+                        (action) -> Void in
+                        let url = URL(string: UIApplicationOpenSettingsURLString)
+                        if let url = url, UIApplication.shared.canOpenURL(url) {
+                            if #available(iOS 10, *) {
+                                UIApplication.shared.open(url, options: [:], completionHandler: {(success) in})
+                            } else {
+                                UIApplication.shared.openURL(url)
+                            }
+                        }
+                    })
+                    alertController.addAction(cancelAction)
+                    alertController.addAction(settingsAction)
+                    self.present(alertController, animated : true,completion : nil)
+                })
+            }
+        }
+    }
+    
+    //倒计时定时器方法
     @objc func tickDown1s() {
         if(isDiscountBegin){
             chooseSeedButton.setTitle("放弃专注", for: UIControlState.normal)
@@ -71,6 +107,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //种植失败
     private func seedFail() {
         isDiscountBegin = false
         self.timeLabel.text = String(tomatoTime) + " : 00"
@@ -85,9 +122,12 @@ class ViewController: UIViewController {
         let okAction=UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler:nil)
         alertController.addAction(okAction)
         self.present(alertController, animated : true,completion : nil)
+        
+        pushNotification(title: "专注失败", body: "由于你的不专心，作物已经死亡。")
         //log
     }
     
+    //种植成功
     private func seedSucc() {
         isDiscountBegin = false
         self.timeLabel.text = String(tomatoTime) + " : 00"
@@ -103,6 +143,18 @@ class ViewController: UIViewController {
         alertController.addAction(okAction)
         self.present(alertController, animated : true,completion : nil)
         //log
+        
+    }
+    
+    //推送消息
+    private func pushNotification(title: String, body: String) {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let requestIdentifier = "Notification"
+        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { error in}
     }
 }
 
