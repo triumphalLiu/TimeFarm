@@ -20,12 +20,29 @@ class LogModel {
     func saveLog(date: Date, getWhat: String, isSucc: Bool, length: Int, kind: Int) {
         let log = readLog()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = DateFormatter.Style.full
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let succ : String = (isSucc) ? ("1") : ("0")
         let array : NSMutableDictionary = [:]
         array.setDictionary(log)
         array[String(currentTimes)] = [dateFormatter.string(from: date), succ, String(kind), getWhat, String(length)]
         array.write(toFile: LogPath(), atomically: true)
+    }
+    
+    func removeLog(key : String){
+        let rootDic : NSMutableDictionary! = NSMutableDictionary(contentsOfFile: LogPath())
+        let path = LogPath()
+        try! fileManager.removeItem(atPath: path)
+        fileManager.createFile(atPath: path, contents: nil, attributes: nil)
+        rootDic!.removeObject(forKey: key)
+        var i:Int = Int(key)!
+        while i < currentTimes {
+            let value : [String] = rootDic[String(i+1)] as! [String]
+            rootDic[String(i)] = value
+            rootDic!.removeObject(forKey: String(i+1))
+            i += 1
+        }
+        currentTimes -= 1
+        rootDic!.write(toFile: LogPath(), atomically: true)
     }
     
     func LogPath() -> String{

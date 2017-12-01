@@ -93,7 +93,7 @@ class ChooseSeedViewController:UIViewController{
         isDiscountBegin = true
         discountTime = tomatoTime * 60
         thisTime = tomatoTime
-        currentTimes += 1
+        startTime = Date()
         self.navigationController?.popViewController(animated: true)
     }
 }

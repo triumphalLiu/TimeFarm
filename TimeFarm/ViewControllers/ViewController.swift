@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         }else{
             let alertController=UIAlertController(title: "放弃专注", message: "放弃专注后，本次种植失败，并且会损失一定量的种子！", preferredStyle: UIAlertControllerStyle.alert)
             let cancelAction=UIAlertAction(title: "继续专注", style: UIAlertActionStyle.cancel, handler:nil)
-            let okAction=UIAlertAction(title: "残忍放弃", style: UIAlertActionStyle.default, handler:
+            let okAction=UIAlertAction(title: "残忍放弃", style: UIAlertActionStyle.destructive, handler:
             {
                 (alerts: UIAlertAction!) ->Void in
                 self.seedFail()
@@ -166,7 +166,8 @@ class ViewController: UIViewController {
             pushNotification(title: "专注失败", body: "由于你的不专心，作物已经死亡。")
             //log
             dataModel.saveData()
-            logModel.saveLog(date: Date(), getWhat: msg, isSucc: false, length: thisTime, kind: currentSeedNum)
+            currentTimes += 1
+            logModel.saveLog(date: startTime, getWhat: msg, isSucc: false, length: thisTime, kind: currentSeedNum)
         }
     }
     
@@ -196,7 +197,8 @@ class ViewController: UIViewController {
         self.present(alertController, animated : true,completion : nil)
         //log
         dataModel.saveData()
-        logModel.saveLog(date: Date(), getWhat: msg, isSucc: true, length: thisTime, kind: currentSeedNum)
+        currentTimes += 1
+        logModel.saveLog(date: startTime, getWhat: msg, isSucc: true, length: thisTime, kind: currentSeedNum)
     }
     
     //推送消息

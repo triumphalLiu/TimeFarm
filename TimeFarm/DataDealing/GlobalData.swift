@@ -27,6 +27,7 @@ var discountTime : Int = 0 //倒计时时间
 var lockTime : Date! //锁屏的时间
 var resumeTime : Date! //恢复的时间
 var thisTime : Int = 0 //本次专注时间
+var startTime : Date! //开始的时间
 
 let dataModel : DataModel = DataModel()
 let logModel : LogModel = LogModel()

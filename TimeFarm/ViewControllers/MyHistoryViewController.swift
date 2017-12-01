@@ -40,6 +40,8 @@ class MyHistoryViewController:UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as! HistoryRecordCell
+        print(currentTimes)
+        print(indexPath.section)
         cell.dateLabel.text = historyArray[String(currentTimes - indexPath.section)]?[0]
         cell.detailLabel.text = historyArray[String(currentTimes - indexPath.section)]?[3]
         let imageNo : Int! = Int(historyArray[String(currentTimes - indexPath.section)]?[2] as String!)
@@ -48,7 +50,32 @@ class MyHistoryViewController:UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("111")
+        let keys = Array(historyArray.keys)
+        let alertController = UIAlertController(title: "选择操作", message: "请选择一项要进行的操作", preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let archiveAction = UIAlertAction(title: "查看详情", style: .default, handler:{
+            (alerts: UIAlertAction!) ->Void in
+            var msg : String = "\n"
+            msg.append("种植时间：\n\(self.historyArray[keys[indexPath.section]]![0] as String)\n")
+            msg.append("收成情况：\n\(self.historyArray[keys[indexPath.section]]![3] as String)\n")
+            msg.append("专注时长：\n\(self.historyArray[keys[indexPath.section]]![4] as String + "分钟")\n")
+            let alertController = UIAlertController(title: "本次专注的详细情况", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+            let okAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler:nil)
+            alertController.addAction(okAction)
+            self.present(alertController, animated : true,completion : nil)
+        })
+        let deleteAction = UIAlertAction(title: "删除", style: .destructive, handler:{
+            (alerts: UIAlertAction!) ->Void in
+            print(indexPath.section)
+            self.logModel.removeLog(key: String(currentTimes - indexPath.section))
+            self.historyArray = self.logModel.readLog()
+            self.tableView.reloadData()
+        })
+        alertController.addAction(cancelAction)
+        alertController.addAction(archiveAction)
+        alertController.addAction(deleteAction)
+        self.present(alertController, animated: true, completion: nil)
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
 
 }
