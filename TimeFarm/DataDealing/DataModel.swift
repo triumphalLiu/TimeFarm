@@ -10,24 +10,21 @@ import Foundation
 import UIKit
 
 class DataModel: NSObject{
+    
     //以下为用户配置文件的读取
+    let fileManager = FileManager()
+    
     //保存数据
     func saveData() {
-        var isNotDisturbString : String
-        if(isNotDisturb){
-            isNotDisturbString = "1"
-        }else{
-            isNotDisturbString = "0"
-        }
+        let curT = String(currentTimes)
         let array : NSDictionary = [
             "tomatoTime": String(tomatoTime),
-            "isNotDisturb": isNotDisturbString,
             "currentCity": currentCity,
             "currentSeedNum": String(currentSeedNum),
             "currentTomato": String(currentTomato),
             "currentGrape": String(currentGrape),
-            "currentWaterMelon": String(currentWaterMelon)
-        ]
+            "currentWaterMelon": String(currentWaterMelon),
+            "currentTimes": curT]
         array.write(toFile: dataFilePath(), atomically: true)
     }
     
@@ -37,13 +34,6 @@ class DataModel: NSObject{
         for(key, value) in dic{
             switch key{
             case "tomatoTime": tomatoTime = Int(value)!
-                break
-            case "isNotDisturb":
-                if Int(value) == 0{
-                    isNotDisturb = false
-                }else{
-                    isNotDisturb = true
-                }
                 break
             case "currentCity": currentCity = value
                 break
@@ -55,6 +45,7 @@ class DataModel: NSObject{
                 break
             case "currentWaterMelon": currentWaterMelon = Int(value)!
                 break
+            case "currentTimes": currentTimes = Int(value)!
             default:
                 break
             }
@@ -63,6 +54,18 @@ class DataModel: NSObject{
     
     //文件路径
     func dataFilePath()->String{
-        return Bundle.main.path(forResource: "userList", ofType: "plist")!
+        //simulator
+        //return Bundle.main.path(forResource: "userList", ofType: "plist")!
+        //取沙盒里plist文件
+        let documentDirectory: NSArray = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray
+        let writableDBPath = (documentDirectory[0] as AnyObject).appendingPathComponent("/userList") as String
+        //判断沙盒的appData.plist文件是否存在,不存在则从资源目录复制一份
+        let dbexits = fileManager.fileExists(atPath: writableDBPath)
+        print(dbexits)
+        if (dbexits != true) {
+            let dbFile = Bundle.main.path(forResource: "userList", ofType: "plist")!
+            try! fileManager.copyItem(atPath: dbFile, toPath: writableDBPath)
+        }
+        return writableDBPath
     }
 }

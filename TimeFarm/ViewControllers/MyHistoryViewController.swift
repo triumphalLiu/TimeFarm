@@ -16,6 +16,7 @@ class MyHistoryViewController:UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 75
+        print(historyArray)
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,7 +32,7 @@ class MyHistoryViewController:UITableViewController{
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return Array(historyArray.keys).count
+        return currentTimes
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
