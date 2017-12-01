@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class DataModel: NSObject{
-    
+    //以下为用户配置文件的读取
     //保存数据
     func saveData() {
         var isNotDisturbString : String

@@ -115,12 +115,49 @@ class ViewController: UIViewController {
             isDiscountBegin = false
             self.timeLabel.text = String(tomatoTime) + " : 00"
             chooseSeedButton.setTitle("选择种子", for: UIControlState.normal)
-            if(currentSeedNum == 1) {if(currentTomato > 0){currentTomato-=1}}
-            else if(currentSeedNum == 2) {if(currentGrape > 0){currentGrape-=1}}
-            else if(currentSeedNum == 3){if(currentWaterMelon > 0){currentWaterMelon-=1}}
             
             var msg : String = "专注失败，你本次失去了:"
-            msg.append("1000块")
+            if(currentSeedNum == 0) {
+                if(currentTomato > 1){
+                    currentTomato-=2
+                    msg.append("🍅×2")
+                }
+                else if(currentTomato == 1){
+                    currentTomato-=1
+                    msg.append("🍅×1")
+                }
+                else{
+                    msg.removeAll()
+                    msg = "专注失败，家徒四壁没有什么好失去的了。"
+                }
+            }
+            else if(currentSeedNum == 1) {
+                if(currentGrape > 1){
+                    currentGrape-=2
+                    msg.append("🍇×2")
+                }
+                else if(currentGrape == 1){
+                    currentGrape-=1
+                    msg.append("🍇×1")
+                }else{
+                    currentTomato-=2
+                    msg.append("🍅×2")
+                }
+            }
+            else if(currentSeedNum == 2){
+                if(currentWaterMelon > 1){
+                    currentWaterMelon-=2
+                    msg.append("🍉×2")
+                }
+                else if(currentWaterMelon == 1){
+                    currentWaterMelon-=1
+                    msg.append("🍉×1")
+                }else{
+                    currentGrape-=2
+                    msg.append("🍇×2")
+                }
+            }
+            
             let alertController=UIAlertController(title: "专注失败", message: msg, preferredStyle: UIAlertControllerStyle.alert)
             let okAction=UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler:nil)
             alertController.addAction(okAction)
@@ -128,6 +165,8 @@ class ViewController: UIViewController {
             
             pushNotification(title: "专注失败", body: "由于你的不专心，作物已经死亡。")
             //log
+            dataModel.saveData()
+            logModel.saveLog(date: Date(), getWhat: msg, isSucc: false, length: thisTime, kind: currentSeedNum)
         }
     }
     
@@ -136,18 +175,28 @@ class ViewController: UIViewController {
         isDiscountBegin = false
         self.timeLabel.text = String(tomatoTime) + " : 00"
         chooseSeedButton.setTitle("选择种子", for: UIControlState.normal)
-        if(currentSeedNum == 1) {currentTomato+=1}
-        else if(currentSeedNum == 2) {currentGrape+=1}
-        else if(currentSeedNum == 3){currentWaterMelon+=1}
         
         var msg : String = "专注成功，你本次获得了:"
-        msg.append("1000块")
+        if(currentSeedNum == 1) {
+            currentTomato+=1
+            msg.append("🍅×1")
+        }
+        else if(currentSeedNum == 2) {
+            currentGrape+=1
+            msg.append("🍇×1")
+        }
+        else if(currentSeedNum == 3){
+            currentWaterMelon+=1
+            msg.append("🍉×1")
+        }
+        
         let alertController=UIAlertController(title: "专注完成", message: msg, preferredStyle: UIAlertControllerStyle.alert)
         let okAction=UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler:nil)
         alertController.addAction(okAction)
         self.present(alertController, animated : true,completion : nil)
         //log
-        
+        dataModel.saveData()
+        logModel.saveLog(date: Date(), getWhat: msg, isSucc: true, length: thisTime, kind: currentSeedNum)
     }
     
     //推送消息

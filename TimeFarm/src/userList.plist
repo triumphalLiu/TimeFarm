@@ -11,10 +11,12 @@
 	<key>currentSeedNum</key>
 	<string>0</string>
 	<key>currentTomato</key>
-	<string>0</string>
+	<string>150</string>
 	<key>currentGrape</key>
-	<string>0</string>
+	<string>150</string>
 	<key>currentWaterMelon</key>
+	<string>150</string>
+	<key>currentTimes</key>
 	<string>0</string>
 </dict>
 </plist>

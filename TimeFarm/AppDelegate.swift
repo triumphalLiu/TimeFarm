@@ -13,7 +13,6 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let dataModel : DataModel = DataModel()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //读取数据
@@ -50,7 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             dateComponentsFormatter.unitsStyle = .full
             let interval = resumeTime.timeIntervalSince(lockTime)
             dateComponentsFormatter.string(from: interval)
-            print(Int(interval))
             discountTime -= Int(interval)
         }
     }
@@ -80,6 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return VC
     }
     
+    //MARK:Apple只在用户按锁屏的时候允许程序改变applicationDidEnterBackground 模拟器无效！
     func DidUserPressLockButton() -> Bool {
         let oldBrightness = UIScreen.main.brightness
         UIScreen.main.brightness = oldBrightness + (oldBrightness <= 0.01 ? (0.01) : (-0.01))

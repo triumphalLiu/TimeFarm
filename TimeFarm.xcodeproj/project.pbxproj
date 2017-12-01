@@ -15,6 +15,9 @@
 		182DA66C1FC955B3000AAB71 /* tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA66B1FC955AE000AAB71 /* tomato.png */; };
 		182DA66F1FC95745000AAB71 /* grape.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA66D1FC9573E000AAB71 /* grape.png */; };
 		182DA6701FC95749000AAB71 /* watermelon.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA66E1FC9573F000AAB71 /* watermelon.png */; };
+		1851F0061FD12BDD00D725B8 /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851F0051FD12BDD00D725B8 /* LogModel.swift */; };
+		1851F0091FD132D900D725B8 /* HistoryRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851F0081FD132D900D725B8 /* HistoryRecordCell.swift */; };
+		1851F00D1FD13AA000D725B8 /* historyDetail.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1851F00C1FD13AA000D725B8 /* historyDetail.plist */; };
 		18535E471FC58D0F00D2E762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18535E461FC58D0F00D2E762 /* AppDelegate.swift */; };
 		18535E491FC58D0F00D2E762 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18535E481FC58D0F00D2E762 /* ViewController.swift */; };
 		18535E4C1FC58D0F00D2E762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18535E4A1FC58D0F00D2E762 /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 		182DA66B1FC955AE000AAB71 /* tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tomato.png; sourceTree = "<group>"; };
 		182DA66D1FC9573E000AAB71 /* grape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grape.png; sourceTree = "<group>"; };
 		182DA66E1FC9573F000AAB71 /* watermelon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watermelon.png; sourceTree = "<group>"; };
+		1851F0051FD12BDD00D725B8 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
+		1851F0081FD132D900D725B8 /* HistoryRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRecordCell.swift; sourceTree = "<group>"; };
+		1851F00C1FD13AA000D725B8 /* historyDetail.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = historyDetail.plist; sourceTree = "<group>"; };
 		18535E431FC58D0F00D2E762 /* TimeFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18535E461FC58D0F00D2E762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18535E481FC58D0F00D2E762 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +92,14 @@
 			path = ChooseCity;
 			sourceTree = "<group>";
 		};
+		1851F0071FD132BE00D725B8 /* HistoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				1851F0081FD132D900D725B8 /* HistoryRecordCell.swift */,
+			);
+			path = HistoryCell;
+			sourceTree = "<group>";
+		};
 		18535E3A1FC58D0F00D2E762 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +123,6 @@
 				18BA9D071FCEA4440038F228 /* Storyboards */,
 				18BA9D061FCEA4280038F228 /* DataDealing */,
 				18BA9D051FCEA3E90038F228 /* ViewControllers */,
-				182A21F41FCD70CE0086B5CB /* ChooseCity */,
 				18535E461FC58D0F00D2E762 /* AppDelegate.swift */,
 				18535E5C1FC5938E00D2E762 /* src */,
 				18535E4D1FC58D0F00D2E762 /* Assets.xcassets */,
@@ -132,6 +145,7 @@
 				18BA9D031FCE9C450038F228 /* launchScreen.jpg */,
 				18535E5E1FC593F000D2E762 /* background.jpeg */,
 				18BA9D0A1FCEACA70038F228 /* userList.plist */,
+				1851F00C1FD13AA000D725B8 /* historyDetail.plist */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -148,6 +162,8 @@
 		18BA9D051FCEA3E90038F228 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1851F0071FD132BE00D725B8 /* HistoryCell */,
+				182A21F41FCD70CE0086B5CB /* ChooseCity */,
 				18535E481FC58D0F00D2E762 /* ViewController.swift */,
 				18535E641FC5B3F900D2E762 /* ChooseSeedViewController.swift */,
 				18535E661FC5B45400D2E762 /* MyHistoryViewController.swift */,
@@ -161,6 +177,7 @@
 			children = (
 				18B5FECE1FCE71630027DE26 /* GlobalData.swift */,
 				18BA9D081FCEA4B00038F228 /* DataModel.swift */,
+				1851F0051FD12BDD00D725B8 /* LogModel.swift */,
 			);
 			path = DataDealing;
 			sourceTree = "<group>";
@@ -248,6 +265,7 @@
 				182DA6671FC9544A000AAB71 /* back.png in Resources */,
 				18535E611FC59A0000D2E762 /* settingIcon.png in Resources */,
 				18535E5F1FC595B500D2E762 /* background.jpeg in Resources */,
+				1851F00D1FD13AA000D725B8 /* historyDetail.plist in Resources */,
 				18535E511FC58D0F00D2E762 /* LaunchScreen.storyboard in Resources */,
 				18535E4E1FC58D0F00D2E762 /* Assets.xcassets in Resources */,
 				18535E4C1FC58D0F00D2E762 /* Main.storyboard in Resources */,
@@ -263,8 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				182DA65E1FC938C8000AAB71 /* SettingTableViewController.swift in Sources */,
+				1851F0091FD132D900D725B8 /* HistoryRecordCell.swift in Sources */,
 				182414C21FC959A0008BD2CF /* ChooseCityViewController.swift in Sources */,
 				18535E491FC58D0F00D2E762 /* ViewController.swift in Sources */,
+				1851F0061FD12BDD00D725B8 /* LogModel.swift in Sources */,
 				18535E651FC5B3F900D2E762 /* ChooseSeedViewController.swift in Sources */,
 				18C610961FCA9D1A0008C96B /* ChooseCityTableViewCell.swift in Sources */,
 				18535E471FC58D0F00D2E762 /* AppDelegate.swift in Sources */,
