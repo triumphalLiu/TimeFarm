@@ -43,6 +43,7 @@
 		18EC7B5E1FD537AC00AA5023 /* sunny.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 18EC7B5B1FD537AC00AA5023 /* sunny.m4a */; };
 		18EC7B5F1FD537AD00AA5023 /* windy.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 18EC7B5C1FD537AC00AA5023 /* windy.m4a */; };
 		18EC7B601FD537AD00AA5023 /* rainy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18EC7B5D1FD537AC00AA5023 /* rainy.mp3 */; };
+		18EC7B621FD542E200AA5023 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC7B611FD542E200AA5023 /* GuideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		18EC7B5B1FD537AC00AA5023 /* sunny.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = sunny.m4a; sourceTree = "<group>"; };
 		18EC7B5C1FD537AC00AA5023 /* windy.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = windy.m4a; sourceTree = "<group>"; };
 		18EC7B5D1FD537AC00AA5023 /* rainy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rainy.mp3; sourceTree = "<group>"; };
+		18EC7B611FD542E200AA5023 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				18535E641FC5B3F900D2E762 /* ChooseSeedViewController.swift */,
 				18535E661FC5B45400D2E762 /* MyHistoryViewController.swift */,
 				182DA65D1FC938C8000AAB71 /* SettingTableViewController.swift */,
+				18EC7B611FD542E200AA5023 /* GuideViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				182DA65E1FC938C8000AAB71 /* SettingTableViewController.swift in Sources */,
 				1851F0091FD132D900D725B8 /* HistoryRecordCell.swift in Sources */,
 				182414C21FC959A0008BD2CF /* ChooseCityViewController.swift in Sources */,
+				18EC7B621FD542E200AA5023 /* GuideViewController.swift in Sources */,
 				18EC7B581FD516A400AA5023 /* SwiftyJSON.swift in Sources */,
 				18535E491FC58D0F00D2E762 /* ViewController.swift in Sources */,
 				1851F0061FD12BDD00D725B8 /* LogModel.swift in Sources */,

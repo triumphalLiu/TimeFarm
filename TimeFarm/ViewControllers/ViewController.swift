@@ -52,6 +52,11 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        //第一次打开应用
+        if (!(UserDefaults.standard.bool(forKey: "everLaunched"))) {
+            let guide = GuideViewController()
+            self.present(guide, animated: true, completion: nil)
+        }
         //正确显示时间
         if(isDiscountBegin && discountTime >= 0){
             if(discountTime % 60 < 10){
@@ -224,6 +229,7 @@ class ViewController: UIViewController {
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = body
+        content.sound = UNNotificationSound.default()
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
         let requestIdentifier = "Notification"
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)

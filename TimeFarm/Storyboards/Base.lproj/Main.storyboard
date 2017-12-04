@@ -573,15 +573,15 @@
                             </tableViewSection>
                             <tableViewSection id="83b-gE-fVL">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="OZf-yQ-8M6" userLabel="关于">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="OZf-yQ-8M6" userLabel="关于">
                                         <rect key="frame" x="0.0" y="435" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OZf-yQ-8M6" id="jgV-ul-2zP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于和帮助" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Waf-Gs-DvC">
-                                                    <rect key="frame" x="8" y="0.0" width="367" height="44"/>
+                                                    <rect key="frame" x="8" y="0.0" width="333" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="vzM-u1-t5q"/>
                                                     </constraints>
@@ -589,17 +589,24 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEd-Yh-I9k">
+                                                    <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+                                                    <connections>
+                                                        <action selector="clickHelpAndAboutButton:" destination="Rg3-Pp-kbp" eventType="touchUpInside" id="a5z-bC-Sob"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="oEd-Yh-I9k" firstAttribute="leading" secondItem="jgV-ul-2zP" secondAttribute="leading" id="4Lf-ef-Zo8"/>
+                                                <constraint firstItem="oEd-Yh-I9k" firstAttribute="top" secondItem="jgV-ul-2zP" secondAttribute="top" id="DGt-EJ-tFu"/>
+                                                <constraint firstAttribute="trailing" secondItem="oEd-Yh-I9k" secondAttribute="trailing" id="QsZ-uV-RPv"/>
+                                                <constraint firstAttribute="bottom" secondItem="oEd-Yh-I9k" secondAttribute="bottom" id="Thp-uU-oML"/>
                                                 <constraint firstAttribute="trailing" secondItem="Waf-Gs-DvC" secondAttribute="trailing" id="ahQ-G8-prH"/>
                                                 <constraint firstItem="Waf-Gs-DvC" firstAttribute="top" secondItem="jgV-ul-2zP" secondAttribute="top" id="lKn-Uj-99F"/>
                                                 <constraint firstItem="Waf-Gs-DvC" firstAttribute="leading" secondItem="jgV-ul-2zP" secondAttribute="leading" constant="8" id="mga-OZ-D94"/>
                                                 <constraint firstAttribute="bottom" secondItem="Waf-Gs-DvC" secondAttribute="bottom" id="nu8-0D-t9F"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="fzo-s9-7HU" kind="show" id="ey1-ps-t2w"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -684,21 +691,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="THG-SV-5eH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1396" y="-1090.704647676162"/>
-        </scene>
-        <!--帮助-->
-        <scene sceneID="eNG-Aa-XuT">
-            <objects>
-                <viewController title="帮助" id="fzo-s9-7HU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cuh-CO-rRa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="dSm-oU-zgs"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14d-p3-XDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1396" y="-314"/>
         </scene>
     </scenes>
     <resources>

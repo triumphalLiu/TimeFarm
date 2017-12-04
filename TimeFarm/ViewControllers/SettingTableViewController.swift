@@ -93,6 +93,12 @@ class SettingTableViewController:UITableViewController{
             }
         }
     }
+    
+    //点击了关于和帮助
+    @IBAction func clickHelpAndAboutButton(_ sender: UIButton) {
+        let guide = GuideViewController()
+        self.present(guide, animated: true, completion: nil)
+    }
 }
 
 extension SettingTableViewController: UIPickerViewDelegate, UIPickerViewDataSource{
