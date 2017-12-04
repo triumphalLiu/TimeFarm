@@ -8,10 +8,12 @@
 
 import UIKit
 import UserNotifications
+import MapKit
 
 class ViewController: UIViewController {
     
     var discountTimer : Timer!
+    var urlSession = URLSession.shared
     
     @IBOutlet weak var chooseSeedButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
@@ -57,6 +59,10 @@ class ViewController: UIViewController {
         }else{
             timeLabel.text = String(tomatoTime) + " : 00"
         }
+        //保存结果
+        dataModel.saveData()
+        //更新天气
+        loadWeather()
     }
     
     //请求允许通知
@@ -210,6 +216,53 @@ class ViewController: UIViewController {
         let requestIdentifier = "Notification"
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { error in}
+    }
+    
+    //加载天气
+    private func loadWeather() {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(currentCity, completionHandler: {
+            (placemarks:[CLPlacemark]?, error:Error?) -> Void in
+            if error != nil {
+                currentTemp = "N/A"
+                currentWeather = 0
+                return
+            }
+            if let p = placemarks?[0]{
+                print("经度：\(p.location!.coordinate.longitude)" + "纬度：\(p.location!.coordinate.latitude)")
+                //Example url: api.openweathermap.org/data/2.5/weather?lat=35&lon=139
+                let apiKEY = "69f11f0bb83fe18a7ff855d7a4c8ba49"
+                let urlStr = "http://api.openweathermap.org/data/2.5/weather?lat=\(p.location!.coordinate.latitude)&lon=\(p.location!.coordinate.longitude)&appid=\(apiKEY)"
+                let url = NSURL(string: urlStr)!
+                guard let weatherData = NSData(contentsOf: url as URL) else { return }
+                let jsonData = try! JSON(data: weatherData as Data)
+                let weather = jsonData["weather"][0]["main"].string!
+                print(weather)
+                switch weather {
+                case "Clear": currentWeather = 0 //晴天
+                    break
+                case "Clouds": currentWeather = 1 
+                    break
+                case "Rain": currentWeather = 2
+                    break
+                case "Snow": currentWeather = 2
+                    break
+                case "Wind": currentWeather = 1
+                    break
+                case "Haze": currentWeather = 0
+                    break
+                case "Mist": currentWeather = 1
+                    break
+                default: currentWeather = 0
+                    break
+                }
+                let temp = jsonData["main"]["temp"].number!
+                currentTemp = String(Int(truncating: temp) - 273) + "°C"
+            } else {
+                currentTemp = "N/A"
+                currentWeather = 0
+            }
+        })
     }
 }
 

@@ -105,8 +105,7 @@ class ChooseCityViewController:UIViewController, CLLocationManagerDelegate{
                 if var locality = p.locality {
                     locality = locality.replacingOccurrences(of: "市", with: "")
                     self.LocCity = locality
-                    let locCityCell : ChooseCityTableViewCell = (self.tableView.cellForRow(at: [0,0])) as! ChooseCityTableViewCell
-                    locCityCell.cityNameLabel.text = self.LocCity
+                    ((self.tableView.cellForRow(at: [0,0])) as? ChooseCityTableViewCell)?.cityNameLabel.text = self.LocCity
                 }
             }
         })

@@ -38,6 +38,7 @@
 		18E364C81FD4F6AB003B9325 /* watermelon_dead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E364C51FD4F6AB003B9325 /* watermelon_dead.jpg */; };
 		18E753C81FCFD51F00453629 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182414BF1FC9594F008BD2CF /* cities.plist */; };
 		18E753CA1FCFDD5B00453629 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E753C91FCFDD5B00453629 /* UserNotifications.framework */; };
+		18EC7B581FD516A400AA5023 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC7B571FD516A400AA5023 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		18E364C41FD4F6AB003B9325 /* tomato_dead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomato_dead.jpg; sourceTree = "<group>"; };
 		18E364C51FD4F6AB003B9325 /* watermelon_dead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = watermelon_dead.jpg; sourceTree = "<group>"; };
 		18E753C91FCFDD5B00453629 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		18EC7B571FD516A400AA5023 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			children = (
 				18B5FECE1FCE71630027DE26 /* GlobalData.swift */,
 				18BA9D081FCEA4B00038F228 /* DataModel.swift */,
+				18EC7B571FD516A400AA5023 /* SwiftyJSON.swift */,
 				1851F0051FD12BDD00D725B8 /* LogModel.swift */,
 			);
 			path = DataDealing;
@@ -295,6 +298,7 @@
 				182DA65E1FC938C8000AAB71 /* SettingTableViewController.swift in Sources */,
 				1851F0091FD132D900D725B8 /* HistoryRecordCell.swift in Sources */,
 				182414C21FC959A0008BD2CF /* ChooseCityViewController.swift in Sources */,
+				18EC7B581FD516A400AA5023 /* SwiftyJSON.swift in Sources */,
 				18535E491FC58D0F00D2E762 /* ViewController.swift in Sources */,
 				1851F0061FD12BDD00D725B8 /* LogModel.swift in Sources */,
 				18535E651FC5B3F900D2E762 /* ChooseSeedViewController.swift in Sources */,

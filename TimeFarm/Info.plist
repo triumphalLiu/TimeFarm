@@ -55,5 +55,10 @@
 	<false/>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>允许应用访问图库用以保存截图</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
