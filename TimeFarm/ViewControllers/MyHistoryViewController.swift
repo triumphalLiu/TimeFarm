@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 class MyHistoryViewController:UITableViewController{
     
     let logModel = LogModel()
@@ -28,7 +29,8 @@ class MyHistoryViewController:UITableViewController{
     }
     
     @IBAction func clickShare(_ sender: UIBarButtonItem) {
-        print("going to share!")
+        let image = getScreenShot()
+        //TODO:通过微信api分享到好友或朋友圈
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -83,5 +85,14 @@ class MyHistoryViewController:UITableViewController{
         self.present(alertController, animated: true, completion: nil)
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
-
+    
+    func getScreenShot() -> UIImage {
+        let window = UIApplication.shared.keyWindow!
+        UIGraphicsBeginImageContextWithOptions(window.bounds.size, false, 0.0)
+        window.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image : UIImage! = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+        return image
+    }
 }
