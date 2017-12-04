@@ -32,7 +32,7 @@ class MyHistoryViewController:UITableViewController{
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return currentTimes
+        return historyArray.keys.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,10 +43,15 @@ class MyHistoryViewController:UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as! HistoryRecordCell
         print(currentTimes)
         print(indexPath.section)
+        let succ = historyArray[String(currentTimes - indexPath.section)]?[1]
         cell.dateLabel.text = historyArray[String(currentTimes - indexPath.section)]?[0]
         cell.detailLabel.text = historyArray[String(currentTimes - indexPath.section)]?[3]
         let imageNo : Int! = Int(historyArray[String(currentTimes - indexPath.section)]?[2] as String!)
-        cell.seedImage.image = UIImage(named:seedList[imageNo])
+        if succ == "1"{
+            cell.seedImage.image = UIImage(named:seedList[imageNo])
+        }else{
+            cell.seedImage.image = UIImage(named:seedDeadList[imageNo])
+        }
         return cell
     }
     

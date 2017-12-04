@@ -21,6 +21,7 @@ var currentWaterMelon : Int = 0 //save
 
 //每次打开程序都重置的数据
 let seedList : [String] = ["tomato.png", "grape.png", "watermelon.png"]
+let seedDeadList : [String] = ["tomato_dead.jpg", "grape_dead.jpg", "watermelon_dead.jpg"]
 var isPaused : Bool = false //初始非特殊情况暂停
 var isDiscountBegin : Bool = false //是否已经开始倒计时
 var discountTime : Int = 0 //倒计时时间

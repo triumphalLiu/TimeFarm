@@ -178,15 +178,15 @@ class ViewController: UIViewController {
         chooseSeedButton.setTitle("选择种子", for: UIControlState.normal)
         
         var msg : String = "专注成功，你本次获得了:"
-        if(currentSeedNum == 1) {
+        if(currentSeedNum == 0) {
             currentTomato+=1
             msg.append("🍅×1")
         }
-        else if(currentSeedNum == 2) {
+        else if(currentSeedNum == 1) {
             currentGrape+=1
             msg.append("🍇×1")
         }
-        else if(currentSeedNum == 3){
+        else if(currentSeedNum == 2){
             currentWaterMelon+=1
             msg.append("🍉×1")
         }

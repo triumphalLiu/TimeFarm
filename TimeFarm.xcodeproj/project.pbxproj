@@ -33,6 +33,9 @@
 		18BA9D091FCEA4B00038F228 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA9D081FCEA4B00038F228 /* DataModel.swift */; };
 		18BA9D0B1FCEACA70038F228 /* userList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BA9D0A1FCEACA70038F228 /* userList.plist */; };
 		18C610961FCA9D1A0008C96B /* ChooseCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C610951FCA9D1A0008C96B /* ChooseCityTableViewCell.swift */; };
+		18E364C61FD4F6AB003B9325 /* grape_dead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E364C31FD4F6AB003B9325 /* grape_dead.jpg */; };
+		18E364C71FD4F6AB003B9325 /* tomato_dead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E364C41FD4F6AB003B9325 /* tomato_dead.jpg */; };
+		18E364C81FD4F6AB003B9325 /* watermelon_dead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E364C51FD4F6AB003B9325 /* watermelon_dead.jpg */; };
 		18E753C81FCFD51F00453629 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182414BF1FC9594F008BD2CF /* cities.plist */; };
 		18E753CA1FCFDD5B00453629 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E753C91FCFDD5B00453629 /* UserNotifications.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +70,9 @@
 		18BA9D081FCEA4B00038F228 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		18BA9D0A1FCEACA70038F228 /* userList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = userList.plist; sourceTree = "<group>"; };
 		18C610951FCA9D1A0008C96B /* ChooseCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityTableViewCell.swift; sourceTree = "<group>"; };
+		18E364C31FD4F6AB003B9325 /* grape_dead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grape_dead.jpg; sourceTree = "<group>"; };
+		18E364C41FD4F6AB003B9325 /* tomato_dead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomato_dead.jpg; sourceTree = "<group>"; };
+		18E364C51FD4F6AB003B9325 /* watermelon_dead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = watermelon_dead.jpg; sourceTree = "<group>"; };
 		18E753C91FCFDD5B00453629 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -143,6 +149,9 @@
 				182DA6691FC9555C000AAB71 /* land.png */,
 				18535E601FC599FA00D2E762 /* settingIcon.png */,
 				18BA9D031FCE9C450038F228 /* launchScreen.jpg */,
+				18E364C31FD4F6AB003B9325 /* grape_dead.jpg */,
+				18E364C41FD4F6AB003B9325 /* tomato_dead.jpg */,
+				18E364C51FD4F6AB003B9325 /* watermelon_dead.jpg */,
 				18535E5E1FC593F000D2E762 /* background.jpeg */,
 				18BA9D0A1FCEACA70038F228 /* userList.plist */,
 				1851F00C1FD13AA000D725B8 /* historyDetail.plist */,
@@ -256,14 +265,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E753C81FCFD51F00453629 /* cities.plist in Resources */,
+				18E364C71FD4F6AB003B9325 /* tomato_dead.jpg in Resources */,
 				18BA9D041FCE9C4A0038F228 /* launchScreen.jpg in Resources */,
 				182DA6701FC95749000AAB71 /* watermelon.png in Resources */,
 				182DA66F1FC95745000AAB71 /* grape.png in Resources */,
+				18E364C81FD4F6AB003B9325 /* watermelon_dead.jpg in Resources */,
 				182DA66C1FC955B3000AAB71 /* tomato.png in Resources */,
 				182DA66A1FC95567000AAB71 /* land.png in Resources */,
 				182DA6681FC9544E000AAB71 /* next.png in Resources */,
 				182DA6671FC9544A000AAB71 /* back.png in Resources */,
 				18535E611FC59A0000D2E762 /* settingIcon.png in Resources */,
+				18E364C61FD4F6AB003B9325 /* grape_dead.jpg in Resources */,
 				18535E5F1FC595B500D2E762 /* background.jpeg in Resources */,
 				1851F00D1FD13AA000D725B8 /* historyDetail.plist in Resources */,
 				18535E511FC58D0F00D2E762 /* LaunchScreen.storyboard in Resources */,

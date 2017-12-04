@@ -49,10 +49,8 @@ class LogModel {
     func LogPath() -> String{
         //simulator
         //return Bundle.main.path(forResource: "historyDetail", ofType: "plist")!
-        //取沙盒里plist文件
         let documentDirectory: NSArray = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray
         let writableDBPath = (documentDirectory[0] as AnyObject).appendingPathComponent("/historyDetail") as String
-        //判断沙盒的appData.plist文件是否存在,不存在则从资源目录复制一份
         let dbexits = fileManager.fileExists(atPath: writableDBPath)
         print(dbexits)
         if (dbexits != true) {
