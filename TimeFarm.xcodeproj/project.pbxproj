@@ -39,6 +39,10 @@
 		18E753C81FCFD51F00453629 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182414BF1FC9594F008BD2CF /* cities.plist */; };
 		18E753CA1FCFDD5B00453629 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E753C91FCFDD5B00453629 /* UserNotifications.framework */; };
 		18EC7B581FD516A400AA5023 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC7B571FD516A400AA5023 /* SwiftyJSON.swift */; };
+		18EC7B5A1FD52E1800AA5023 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC7B591FD52E1800AA5023 /* MusicModel.swift */; };
+		18EC7B5E1FD537AC00AA5023 /* sunny.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 18EC7B5B1FD537AC00AA5023 /* sunny.m4a */; };
+		18EC7B5F1FD537AD00AA5023 /* windy.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 18EC7B5C1FD537AC00AA5023 /* windy.m4a */; };
+		18EC7B601FD537AD00AA5023 /* rainy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18EC7B5D1FD537AC00AA5023 /* rainy.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,10 @@
 		18E364C51FD4F6AB003B9325 /* watermelon_dead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = watermelon_dead.jpg; sourceTree = "<group>"; };
 		18E753C91FCFDD5B00453629 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		18EC7B571FD516A400AA5023 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		18EC7B591FD52E1800AA5023 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
+		18EC7B5B1FD537AC00AA5023 /* sunny.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = sunny.m4a; sourceTree = "<group>"; };
+		18EC7B5C1FD537AC00AA5023 /* windy.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = windy.m4a; sourceTree = "<group>"; };
+		18EC7B5D1FD537AC00AA5023 /* rainy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rainy.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +158,9 @@
 				182DA66E1FC9573F000AAB71 /* watermelon.png */,
 				182DA6691FC9555C000AAB71 /* land.png */,
 				18535E601FC599FA00D2E762 /* settingIcon.png */,
+				18EC7B5D1FD537AC00AA5023 /* rainy.mp3 */,
+				18EC7B5B1FD537AC00AA5023 /* sunny.m4a */,
+				18EC7B5C1FD537AC00AA5023 /* windy.m4a */,
 				18BA9D031FCE9C450038F228 /* launchScreen.jpg */,
 				18E364C31FD4F6AB003B9325 /* grape_dead.jpg */,
 				18E364C41FD4F6AB003B9325 /* tomato_dead.jpg */,
@@ -190,6 +201,7 @@
 				18BA9D081FCEA4B00038F228 /* DataModel.swift */,
 				18EC7B571FD516A400AA5023 /* SwiftyJSON.swift */,
 				1851F0051FD12BDD00D725B8 /* LogModel.swift */,
+				18EC7B591FD52E1800AA5023 /* MusicModel.swift */,
 			);
 			path = DataDealing;
 			sourceTree = "<group>";
@@ -238,7 +250,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -273,14 +285,17 @@
 				182DA6701FC95749000AAB71 /* watermelon.png in Resources */,
 				182DA66F1FC95745000AAB71 /* grape.png in Resources */,
 				18E364C81FD4F6AB003B9325 /* watermelon_dead.jpg in Resources */,
+				18EC7B5E1FD537AC00AA5023 /* sunny.m4a in Resources */,
 				182DA66C1FC955B3000AAB71 /* tomato.png in Resources */,
 				182DA66A1FC95567000AAB71 /* land.png in Resources */,
 				182DA6681FC9544E000AAB71 /* next.png in Resources */,
 				182DA6671FC9544A000AAB71 /* back.png in Resources */,
 				18535E611FC59A0000D2E762 /* settingIcon.png in Resources */,
+				18EC7B5F1FD537AD00AA5023 /* windy.m4a in Resources */,
 				18E364C61FD4F6AB003B9325 /* grape_dead.jpg in Resources */,
 				18535E5F1FC595B500D2E762 /* background.jpeg in Resources */,
 				1851F00D1FD13AA000D725B8 /* historyDetail.plist in Resources */,
+				18EC7B601FD537AD00AA5023 /* rainy.mp3 in Resources */,
 				18535E511FC58D0F00D2E762 /* LaunchScreen.storyboard in Resources */,
 				18535E4E1FC58D0F00D2E762 /* Assets.xcassets in Resources */,
 				18535E4C1FC58D0F00D2E762 /* Main.storyboard in Resources */,
@@ -304,6 +319,7 @@
 				18535E651FC5B3F900D2E762 /* ChooseSeedViewController.swift in Sources */,
 				18C610961FCA9D1A0008C96B /* ChooseCityTableViewCell.swift in Sources */,
 				18535E471FC58D0F00D2E762 /* AppDelegate.swift in Sources */,
+				18EC7B5A1FD52E1800AA5023 /* MusicModel.swift in Sources */,
 				18B5FECF1FCE71630027DE26 /* GlobalData.swift in Sources */,
 				18535E671FC5B45400D2E762 /* MyHistoryViewController.swift in Sources */,
 				18BA9D091FCEA4B00038F228 /* DataModel.swift in Sources */,

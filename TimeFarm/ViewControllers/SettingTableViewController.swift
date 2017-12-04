@@ -9,6 +9,7 @@
 import UIKit
 class SettingTableViewController:UITableViewController{
     
+    @IBOutlet weak var playSwitch: UISwitch!
     @IBOutlet weak var notdisturbButton: UISwitch!
     @IBOutlet weak var pauseButton: UISwitch!
     @IBOutlet weak var cityLabel: UILabel!
@@ -29,6 +30,11 @@ class SettingTableViewController:UITableViewController{
         cityLabel.text = currentCity
         notdisturbButton.isOn = isNotDisturb
         pauseButton.isOn = isPaused
+        if(isPlaySound == 0){
+            playSwitch.isOn = false
+        }else{
+            playSwitch.isOn = true
+        }
     }
     
     //单击选择时间事件
@@ -71,6 +77,21 @@ class SettingTableViewController:UITableViewController{
     //免打扰按钮
     @IBAction func clickNotdisturbButton(_ sender: UISwitch) {
         isNotDisturb = notdisturbButton.isOn
+    }
+    
+    //播放白噪声开关
+    @IBAction func clickPlaySound(_ sender: UISwitch) {
+        if(playSwitch.isOn){
+            isPlaySound = 1
+            if(isDiscountBegin){
+                musicModel.playSound(which: currentWeather)
+            }
+        }else{
+            isPlaySound = 0
+            if(isDiscountBegin){
+                musicModel.playStop()
+            }
+        }
     }
 }
 

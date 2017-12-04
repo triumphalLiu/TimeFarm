@@ -95,5 +95,9 @@ class ChooseSeedViewController:UIViewController{
         thisTime = tomatoTime
         startTime = Date()
         self.navigationController?.popViewController(animated: true)
+        //播放声音
+        if(isPlaySound != 0){
+            musicModel.playSound(which: currentWeather)
+        }
     }
 }

@@ -17,6 +17,7 @@ class DataModel: NSObject{
     //保存数据
     func saveData() {
         let curT = String(currentTimes)
+        let isPlay = String(isPlaySound)
         let array : NSDictionary = [
             "tomatoTime": String(tomatoTime),
             "currentCity": currentCity,
@@ -24,7 +25,8 @@ class DataModel: NSObject{
             "currentTomato": String(currentTomato),
             "currentGrape": String(currentGrape),
             "currentWaterMelon": String(currentWaterMelon),
-            "currentTimes": curT]
+            "currentTimes": curT,
+            "isPlaySound": isPlay]
         array.write(toFile: dataFilePath(), atomically: true)
     }
     
@@ -46,6 +48,9 @@ class DataModel: NSObject{
             case "currentWaterMelon": currentWaterMelon = Int(value)!
                 break
             case "currentTimes": currentTimes = Int(value)!
+                break
+            case "isPlaySound": isPlaySound = Int(value)!
+                break
             default:
                 break
             }
@@ -59,7 +64,6 @@ class DataModel: NSObject{
         let documentDirectory: NSArray = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray
         let writableDBPath = (documentDirectory[0] as AnyObject).appendingPathComponent("/userList") as String
         let dbexits = fileManager.fileExists(atPath: writableDBPath)
-        print(dbexits)
         if (dbexits != true) {
             let dbFile = Bundle.main.path(forResource: "userList", ofType: "plist")!
             try! fileManager.copyItem(atPath: dbFile, toPath: writableDBPath)

@@ -4,8 +4,6 @@
 <dict>
 	<key>tomatoTime</key>
 	<string>25</string>
-	<key>isNotDisturb</key>
-	<string>0</string>
 	<key>currentCity</key>
 	<string>北京</string>
 	<key>currentSeedNum</key>
@@ -18,5 +16,7 @@
 	<string>150</string>
 	<key>currentTimes</key>
 	<string>0</string>
+	<key>isPlaySound</key>
+	<string>1</string>
 </dict>
 </plist>

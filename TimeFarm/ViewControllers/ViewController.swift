@@ -9,11 +9,12 @@
 import UIKit
 import UserNotifications
 import MapKit
+import MediaPlayer
 
 class ViewController: UIViewController {
     
+    //定时器 1s 用于倒计时
     var discountTimer : Timer!
-    var urlSession = URLSession.shared
     
     @IBOutlet weak var chooseSeedButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
@@ -41,6 +42,8 @@ class ViewController: UIViewController {
         chooseSeedButton.setTitle("选择种子", for: UIControlState.normal)
         discountTimer = Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: #selector(tickDown1s), userInfo: nil, repeats: true)
         askForNotification()
+        //更新天气
+        loadWeather()
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,8 +64,15 @@ class ViewController: UIViewController {
         }
         //保存结果
         dataModel.saveData()
-        //更新天气
-        loadWeather()
+        //如果城市发生了改变 就更新天气
+        if(lastCity != currentCity){
+            loadWeather()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        lastCity = currentCity
     }
     
     //请求允许通知
@@ -118,6 +128,7 @@ class ViewController: UIViewController {
     //种植失败
     func seedFail() {
         if(isDiscountBegin){
+            musicModel.playStop()
             isDiscountBegin = false
             self.timeLabel.text = String(tomatoTime) + " : 00"
             chooseSeedButton.setTitle("选择种子", for: UIControlState.normal)
@@ -179,6 +190,7 @@ class ViewController: UIViewController {
     
     //种植成功
     func seedSucc() {
+        musicModel.playStop()
         isDiscountBegin = false
         self.timeLabel.text = String(tomatoTime) + " : 00"
         chooseSeedButton.setTitle("选择种子", for: UIControlState.normal)
@@ -229,7 +241,6 @@ class ViewController: UIViewController {
                 return
             }
             if let p = placemarks?[0]{
-                print("经度：\(p.location!.coordinate.longitude)" + "纬度：\(p.location!.coordinate.latitude)")
                 //Example url: api.openweathermap.org/data/2.5/weather?lat=35&lon=139
                 let apiKEY = "69f11f0bb83fe18a7ff855d7a4c8ba49"
                 let urlStr = "http://api.openweathermap.org/data/2.5/weather?lat=\(p.location!.coordinate.latitude)&lon=\(p.location!.coordinate.longitude)&appid=\(apiKEY)"
