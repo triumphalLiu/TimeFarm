@@ -11,9 +11,9 @@
 	<key>currentTomato</key>
 	<string>150</string>
 	<key>currentGrape</key>
-	<string>150</string>
+	<string>56</string>
 	<key>currentWaterMelon</key>
-	<string>150</string>
+	<string>0</string>
 	<key>currentTimes</key>
 	<string>0</string>
 	<key>isPlaySound</key>
