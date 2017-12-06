@@ -200,8 +200,8 @@ extension ChooseCityViewController: UITableViewDelegate ,UITableViewDataSource{
                 alertController.addAction(cancelAction)
                 alertController.addAction(settingsAction)
                 self.present(alertController, animated : true,completion : nil)
-		}
-		else{
+            })
+		}else{
 			currentCity = cell.cityNameLabel.text!
 			if(ChooseCitySearchController.isActive) {
 				self.ChooseCitySearchController.searchBar.resignFirstResponder()

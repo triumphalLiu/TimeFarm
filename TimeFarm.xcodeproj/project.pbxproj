@@ -11,7 +11,6 @@
 		182DA65E1FC938C8000AAB71 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DA65D1FC938C8000AAB71 /* SettingTableViewController.swift */; };
 		182DA6671FC9544A000AAB71 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA6631FC9540E000AAB71 /* back.png */; };
 		182DA6681FC9544E000AAB71 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA6641FC9540E000AAB71 /* next.png */; };
-		182DA66A1FC95567000AAB71 /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA6691FC9555C000AAB71 /* land.png */; };
 		182DA66C1FC955B3000AAB71 /* tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA66B1FC955AE000AAB71 /* tomato.png */; };
 		182DA66F1FC95745000AAB71 /* grape.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA66D1FC9573E000AAB71 /* grape.png */; };
 		182DA6701FC95749000AAB71 /* watermelon.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA66E1FC9573F000AAB71 /* watermelon.png */; };
@@ -27,6 +26,9 @@
 		18535E611FC59A0000D2E762 /* settingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18535E601FC599FA00D2E762 /* settingIcon.png */; };
 		18535E651FC5B3F900D2E762 /* ChooseSeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18535E641FC5B3F900D2E762 /* ChooseSeedViewController.swift */; };
 		18535E671FC5B45400D2E762 /* MyHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18535E661FC5B45400D2E762 /* MyHistoryViewController.swift */; };
+		187ED2351FD7E0130024B785 /* help1.png in Resources */ = {isa = PBXBuildFile; fileRef = 187ED2321FD7E0130024B785 /* help1.png */; };
+		187ED2361FD7E0130024B785 /* help3.png in Resources */ = {isa = PBXBuildFile; fileRef = 187ED2331FD7E0130024B785 /* help3.png */; };
+		187ED2371FD7E0130024B785 /* help2.png in Resources */ = {isa = PBXBuildFile; fileRef = 187ED2341FD7E0130024B785 /* help2.png */; };
 		189BEF0F1FCEF03F00CBA76F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189BEF0E1FCEF03F00CBA76F /* MapKit.framework */; };
 		18B5FECF1FCE71630027DE26 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FECE1FCE71630027DE26 /* GlobalData.swift */; };
 		18BA9D041FCE9C4A0038F228 /* launchScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18BA9D031FCE9C450038F228 /* launchScreen.jpg */; };
@@ -52,7 +54,6 @@
 		182DA65D1FC938C8000AAB71 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		182DA6631FC9540E000AAB71 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		182DA6641FC9540E000AAB71 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
-		182DA6691FC9555C000AAB71 /* land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = land.png; sourceTree = "<group>"; };
 		182DA66B1FC955AE000AAB71 /* tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tomato.png; sourceTree = "<group>"; };
 		182DA66D1FC9573E000AAB71 /* grape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grape.png; sourceTree = "<group>"; };
 		182DA66E1FC9573F000AAB71 /* watermelon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watermelon.png; sourceTree = "<group>"; };
@@ -70,6 +71,9 @@
 		18535E601FC599FA00D2E762 /* settingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingIcon.png; sourceTree = "<group>"; };
 		18535E641FC5B3F900D2E762 /* ChooseSeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSeedViewController.swift; sourceTree = "<group>"; };
 		18535E661FC5B45400D2E762 /* MyHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHistoryViewController.swift; sourceTree = "<group>"; };
+		187ED2321FD7E0130024B785 /* help1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help1.png; sourceTree = "<group>"; };
+		187ED2331FD7E0130024B785 /* help3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help3.png; sourceTree = "<group>"; };
+		187ED2341FD7E0130024B785 /* help2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help2.png; sourceTree = "<group>"; };
 		189BEF0E1FCEF03F00CBA76F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		18B5FECE1FCE71630027DE26 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		18BA9D031FCE9C450038F228 /* launchScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchScreen.jpg; sourceTree = "<group>"; };
@@ -158,10 +162,12 @@
 				182DA66B1FC955AE000AAB71 /* tomato.png */,
 				182DA66D1FC9573E000AAB71 /* grape.png */,
 				182DA66E1FC9573F000AAB71 /* watermelon.png */,
-				182DA6691FC9555C000AAB71 /* land.png */,
 				18535E601FC599FA00D2E762 /* settingIcon.png */,
 				18EC7B5D1FD537AC00AA5023 /* rainy.mp3 */,
 				18EC7B5B1FD537AC00AA5023 /* sunny.m4a */,
+				187ED2321FD7E0130024B785 /* help1.png */,
+				187ED2341FD7E0130024B785 /* help2.png */,
+				187ED2331FD7E0130024B785 /* help3.png */,
 				18EC7B5C1FD537AC00AA5023 /* windy.m4a */,
 				18BA9D031FCE9C450038F228 /* launchScreen.jpg */,
 				18E364C31FD4F6AB003B9325 /* grape_dead.jpg */,
@@ -289,13 +295,15 @@
 				182DA66F1FC95745000AAB71 /* grape.png in Resources */,
 				18E364C81FD4F6AB003B9325 /* watermelon_dead.jpg in Resources */,
 				18EC7B5E1FD537AC00AA5023 /* sunny.m4a in Resources */,
+				187ED2371FD7E0130024B785 /* help2.png in Resources */,
 				182DA66C1FC955B3000AAB71 /* tomato.png in Resources */,
-				182DA66A1FC95567000AAB71 /* land.png in Resources */,
 				182DA6681FC9544E000AAB71 /* next.png in Resources */,
 				182DA6671FC9544A000AAB71 /* back.png in Resources */,
 				18535E611FC59A0000D2E762 /* settingIcon.png in Resources */,
+				187ED2361FD7E0130024B785 /* help3.png in Resources */,
 				18EC7B5F1FD537AD00AA5023 /* windy.m4a in Resources */,
 				18E364C61FD4F6AB003B9325 /* grape_dead.jpg in Resources */,
+				187ED2351FD7E0130024B785 /* help1.png in Resources */,
 				18535E5F1FC595B500D2E762 /* background.jpeg in Resources */,
 				1851F00D1FD13AA000D725B8 /* historyDetail.plist in Resources */,
 				18EC7B601FD537AD00AA5023 /* rainy.mp3 in Resources */,
