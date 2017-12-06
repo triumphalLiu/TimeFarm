@@ -182,12 +182,33 @@ extension ChooseCityViewController: UITableViewDelegate ,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         let cell = tableView.cellForRow(at: indexPath) as! ChooseCityTableViewCell
-        currentCity = cell.cityNameLabel.text!
-        if(ChooseCitySearchController.isActive) {
-            self.ChooseCitySearchController.searchBar.resignFirstResponder()
-            self.ChooseCitySearchController.isActive = false
-        }
-        self.navigationController?.popViewController(animated: true)
+		if cell.cityNameLabel.text! == "定位失败"{
+			DispatchQueue.main.async(execute: { () -> Void in
+                let alertController = UIAlertController(title: "定位功能已关闭", message: "允许获取位置可以让当前白噪音和当前城市天气保持一致哦~", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title:"取消", style: .cancel, handler:nil)
+                let settingsAction = UIAlertAction(title:"设置", style: .default, handler: {
+                    (action) -> Void in
+                    let url = URL(string: UIApplicationOpenSettingsURLString)
+                    if let url = url, UIApplication.shared.canOpenURL(url) {
+                        if #available(iOS 10, *) {
+                            UIApplication.shared.open(url, options: [:], completionHandler: {(success) in})
+                        } else {
+                            UIApplication.shared.openURL(url)
+                        }
+                    }
+                })
+                alertController.addAction(cancelAction)
+                alertController.addAction(settingsAction)
+                self.present(alertController, animated : true,completion : nil)
+		}
+		else{
+			currentCity = cell.cityNameLabel.text!
+			if(ChooseCitySearchController.isActive) {
+				self.ChooseCitySearchController.searchBar.resignFirstResponder()
+				self.ChooseCitySearchController.isActive = false
+			}
+			self.navigationController?.popViewController(animated: true)
+		}
     }
 
     //右侧导航栏
