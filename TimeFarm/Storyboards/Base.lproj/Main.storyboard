@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -197,15 +198,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- : --" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBa-3x-KFx" userLabel="种植时间">
-                                <rect key="frame" x="0.0" y="144" width="231" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="gJ2-JY-mcY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
-                                <color key="textColor" red="0.78823529410000004" green="0.67843137249999996" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3U1-TQ-hOh" userLabel="Left">
                                 <rect key="frame" x="15" y="283" width="50" height="50"/>
                                 <constraints>
@@ -272,38 +264,57 @@
                                     <action selector="clickBeginDiscount:" destination="j4U-TZ-qOr" eventType="touchUpInside" id="x2C-ah-WIL"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ubo-hi-fRD">
+                                <rect key="frame" x="16" y="144" width="215" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pmP-fd-fBT"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="-- : --">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.83569459519467759" blue="0.40592516859956795" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="50"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changeTime:" destination="j4U-TZ-qOr" eventType="editingDidEnd" id="qv9-YN-ARB"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jBa-3x-KFx" firstAttribute="leading" secondItem="sW5-q8-ln3" secondAttribute="leading" id="4D7-BD-a2o"/>
                             <constraint firstAttribute="trailing" secondItem="Uam-Ep-2y2" secondAttribute="trailing" constant="15" id="4SM-pf-1xH"/>
+                            <constraint firstItem="3U1-TQ-hOh" firstAttribute="top" secondItem="Ubo-hi-fRD" secondAttribute="bottom" constant="79" id="8Fm-Q9-nvR"/>
                             <constraint firstItem="lP4-gC-tdN" firstAttribute="top" secondItem="d2b-Uj-yoB" secondAttribute="bottom" constant="15" id="BHD-8A-EgI"/>
-                            <constraint firstItem="sW5-q8-ln3" firstAttribute="trailing" secondItem="jBa-3x-KFx" secondAttribute="trailing" id="BSO-7y-iQE"/>
                             <constraint firstItem="5cX-Us-31o" firstAttribute="leading" secondItem="sW5-q8-ln3" secondAttribute="leading" constant="100" id="EWz-27-xGR"/>
+                            <constraint firstItem="Ubo-hi-fRD" firstAttribute="top" secondItem="sW5-q8-ln3" secondAttribute="top" constant="80" id="FqB-lm-xki"/>
+                            <constraint firstItem="Uam-Ep-2y2" firstAttribute="top" secondItem="Ubo-hi-fRD" secondAttribute="bottom" constant="79" id="Ix4-r5-3dm"/>
                             <constraint firstItem="lP4-gC-tdN" firstAttribute="leading" secondItem="sW5-q8-ln3" secondAttribute="leading" id="PvC-BX-G2V"/>
                             <constraint firstItem="blY-Pe-oDg" firstAttribute="leading" secondItem="3U1-TQ-hOh" secondAttribute="trailing" constant="65" id="Qqf-7d-Kdp"/>
-                            <constraint firstItem="blY-Pe-oDg" firstAttribute="top" secondItem="jBa-3x-KFx" secondAttribute="bottom" constant="44" id="T8u-cD-nw7"/>
                             <constraint firstItem="sW5-q8-ln3" firstAttribute="trailing" secondItem="5cX-Us-31o" secondAttribute="trailing" constant="100" id="XyN-FN-8Ap"/>
                             <constraint firstItem="Uam-Ep-2y2" firstAttribute="leading" secondItem="blY-Pe-oDg" secondAttribute="trailing" constant="65" id="b1X-eT-erm"/>
-                            <constraint firstItem="Uam-Ep-2y2" firstAttribute="top" secondItem="jBa-3x-KFx" secondAttribute="bottom" constant="79" id="dyv-Jy-eYe"/>
+                            <constraint firstItem="Ubo-hi-fRD" firstAttribute="leading" secondItem="sW5-q8-ln3" secondAttribute="leading" constant="16" id="bR0-X9-po7"/>
                             <constraint firstItem="5cX-Us-31o" firstAttribute="top" secondItem="lP4-gC-tdN" secondAttribute="bottom" constant="66" id="f8T-UE-NCR"/>
                             <constraint firstItem="sW5-q8-ln3" firstAttribute="trailing" secondItem="lP4-gC-tdN" secondAttribute="trailing" id="g5W-mv-Gg1"/>
                             <constraint firstItem="d2b-Uj-yoB" firstAttribute="leading" secondItem="sW5-q8-ln3" secondAttribute="leading" id="gDB-9B-89S"/>
-                            <constraint firstItem="3U1-TQ-hOh" firstAttribute="top" secondItem="jBa-3x-KFx" secondAttribute="bottom" constant="79" id="jvp-rA-5PJ"/>
                             <constraint firstItem="sW5-q8-ln3" firstAttribute="trailing" secondItem="d2b-Uj-yoB" secondAttribute="trailing" id="mib-JG-c3g"/>
-                            <constraint firstItem="jBa-3x-KFx" firstAttribute="top" secondItem="sW5-q8-ln3" secondAttribute="top" constant="80" id="oP7-qS-B5r"/>
+                            <constraint firstItem="blY-Pe-oDg" firstAttribute="top" secondItem="Ubo-hi-fRD" secondAttribute="bottom" constant="44" id="s0F-fj-CU8"/>
                             <constraint firstItem="3U1-TQ-hOh" firstAttribute="leading" secondItem="sW5-q8-ln3" secondAttribute="leading" constant="15" id="t3W-0N-KdV"/>
                             <constraint firstItem="d2b-Uj-yoB" firstAttribute="top" secondItem="blY-Pe-oDg" secondAttribute="bottom" constant="40" id="wYO-rn-jOe"/>
+                            <constraint firstItem="Ubo-hi-fRD" firstAttribute="trailing" secondItem="Xs5-Yi-gn4" secondAttribute="trailingMargin" constant="16" id="xEz-Ry-r9l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sW5-q8-ln3"/>
                     </view>
                     <navigationItem key="navigationItem" title="选择作物" largeTitleDisplayMode="never" id="mfW-fe-e2H"/>
                     <connections>
+                        <outlet property="TimeTextField" destination="Ubo-hi-fRD" id="ggh-VZ-Qlm"/>
                         <outlet property="chooseLast" destination="3U1-TQ-hOh" id="LdD-wT-EtT"/>
                         <outlet property="chooseNext" destination="Uam-Ep-2y2" id="uBI-aP-37W"/>
                         <outlet property="needLabel" destination="d2b-Uj-yoB" id="GhV-wi-6FY"/>
                         <outlet property="setSeedPicView" destination="blY-Pe-oDg" id="O2C-Qc-qVt"/>
-                        <outlet property="setTimeLabel" destination="jBa-3x-KFx" id="qB2-k7-5f2"/>
                         <outlet property="startButton" destination="5cX-Us-31o" id="XcK-ik-tja"/>
                         <outlet property="unlockLabel" destination="lP4-gC-tdN" id="DrQ-VA-iZN"/>
                     </connections>
