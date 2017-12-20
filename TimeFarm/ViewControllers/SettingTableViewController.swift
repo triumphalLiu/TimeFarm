@@ -31,7 +31,8 @@ class SettingTableViewController:UITableViewController{
         pauseButton.isOn = isPaused
         if(isPlaySound == 0){
             playSwitch.isOn = false
-        }else{
+        }
+        else{
             playSwitch.isOn = true
         }
     }
@@ -47,9 +48,11 @@ class SettingTableViewController:UITableViewController{
         pickerView.delegate = self
         pickerView.dataSource = self
         pickerView.selectRow((tomatoTime-5)/5, inComponent : 0, animated: true)
-        let pickerViewOKButton : UIBarButtonItem = UIBarButtonItem(title: "完成", style: .done, target: self, action: #selector(clickOKButton))
+        let pickerViewOKButton : UIBarButtonItem = UIBarButtonItem(title: "完成",
+                                                                   style: .done, target: self, action: #selector(clickOKButton))
         let pickerViewSpace : UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let pickerViewCancelButton : UIBarButtonItem = UIBarButtonItem(title: "取消", style: .done, target: self, action: #selector(clickCancelButton))
+        let pickerViewCancelButton : UIBarButtonItem = UIBarButtonItem(title: "取消",
+                                                                       style: .done, target: self, action: #selector(clickCancelButton))
         let pickerViewToolBar : UIToolbar = UIToolbar()
         var toolBarButtons : [UIBarButtonItem] = []
         toolBarButtons.append(pickerViewCancelButton)
@@ -90,7 +93,8 @@ class SettingTableViewController:UITableViewController{
             if(isDiscountBegin){
                 musicModel.playSound(which: currentWeather)
             }
-        }else{
+        }
+        else{
             isPlaySound = 0
             if(isDiscountBegin){
                 musicModel.playStop()

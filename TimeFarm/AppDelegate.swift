@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             try session.setActive(true)
             try session.setCategory(AVAudioSessionCategoryPlayback)
-        } catch {
+        }
+        catch {
             print(error)
         }
         return true
@@ -41,7 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Home button pressed.")
             if(!isPaused){
                 rootVC().seedFail()
-            }else{
+            }
+            else{
                 lockTime = Date()
             }
         }

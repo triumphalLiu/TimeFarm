@@ -31,7 +31,8 @@ class MusicModel{
     func musicPath(which: Int) -> String{
         if(isFileExist(musicList[which])){
             return NSHomeDirectory() + "/Documents/\(musicList[which])"
-        }else{
+        }
+        else{
             return ""
         }
         

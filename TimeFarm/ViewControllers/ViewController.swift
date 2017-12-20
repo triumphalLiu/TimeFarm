@@ -22,10 +22,14 @@ class ViewController: UIViewController {
     @IBAction func clickChooseSeedButton(_ sender: UIButton) {
         if(isDiscountBegin == false){
             self.performSegue(withIdentifier: "showChooseSeed", sender: nil)
-        }else{
-            let alertController=UIAlertController(title: "放弃专注", message: "放弃专注后，本次种植失败，并且会损失一定量的种子！", preferredStyle: UIAlertControllerStyle.alert)
-            let cancelAction=UIAlertAction(title: "继续专注", style: UIAlertActionStyle.cancel, handler:nil)
-            let okAction=UIAlertAction(title: "残忍放弃", style: UIAlertActionStyle.destructive, handler:
+        }
+        else{
+            let alertController=UIAlertController(title: "放弃专注",
+                                                  message: "放弃专注后，本次种植失败，并且会损失一定量的种子！", preferredStyle: UIAlertControllerStyle.alert)
+            let cancelAction=UIAlertAction(title: "继续专注",
+                                           style: UIAlertActionStyle.cancel, handler:nil)
+            let okAction=UIAlertAction(title: "残忍放弃",
+                                       style: UIAlertActionStyle.destructive, handler:
             {
                 (alerts: UIAlertAction!) ->Void in
                 self.seedFail()
@@ -40,7 +44,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = ""
         chooseSeedButton.setTitle("选择种子", for: UIControlState.normal)
-        discountTimer = Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: #selector(tickDown1s), userInfo: nil, repeats: true)
+        discountTimer = Timer.scheduledTimer(timeInterval: TimeInterval(1),
+                                             target: self, selector: #selector(tickDown1s), userInfo: nil, repeats: true)
         askForNotification()
         //更新天气
         loadWeather()
@@ -61,10 +66,12 @@ class ViewController: UIViewController {
         if(isDiscountBegin && discountTime >= 0){
             if(discountTime % 60 < 10){
                 timeLabel.text = String(discountTime / 60) + " : 0" + String(discountTime % 60)
-            }else{
+            }
+            else{
                 timeLabel.text = String(discountTime / 60) + " : " + String(discountTime % 60)
             }
-        }else{
+        }
+        else{
             timeLabel.text = String(tomatoTime) + " : 00"
         }
         //保存结果
@@ -91,14 +98,16 @@ class ViewController: UIViewController {
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {(accepted, error) in}
             case .denied:
                 DispatchQueue.main.async(execute: { () -> Void in
-                    let alertController = UIAlertController(title: "消息推送已关闭", message: "打开通知能获取最新消息哦～", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "消息推送已关闭",
+                                                            message: "打开通知能获取最新消息哦～", preferredStyle: .alert)
                     let cancelAction = UIAlertAction(title:"取消", style: .cancel, handler:nil)
                     let settingsAction = UIAlertAction(title:"设置", style: .default, handler: {
                         (action) -> Void in
                         let url = URL(string: UIApplicationOpenSettingsURLString)
                         if let url = url, UIApplication.shared.canOpenURL(url) {
                             if #available(iOS 10, *) {
-                                UIApplication.shared.open(url, options: [:], completionHandler: {(success) in})
+                                UIApplication.shared.open(url, options: [:],
+                                                          completionHandler: {(success) in})
                             } else {
                                 UIApplication.shared.openURL(url)
                             }
@@ -123,7 +132,8 @@ class ViewController: UIViewController {
             else{
                 if(discountTime % 60 < 10){
                     timeLabel.text = String(discountTime / 60) + " : 0" + String(discountTime % 60)
-                }else{
+                }
+                else{
                     timeLabel.text = String(discountTime / 60) + " : " + String(discountTime % 60)
                 }
             }
@@ -133,6 +143,10 @@ class ViewController: UIViewController {
     //种植失败
     func seedFail() {
         if(isDiscountBegin){
+            //振动
+            let soundID = SystemSoundID(kSystemSoundID_Vibrate)
+            AudioServicesPlaySystemSound(soundID)
+            //其他
             musicModel.playStop()
             isDiscountBegin = false
             self.timeLabel.text = String(tomatoTime) + " : 00"
@@ -161,7 +175,8 @@ class ViewController: UIViewController {
                 else if(currentGrape == 1){
                     currentGrape-=1
                     msg.append("🍇×1")
-                }else{
+                }
+                else{
                     currentTomato-=2
                     msg.append("🍅×2")
                 }
@@ -174,14 +189,17 @@ class ViewController: UIViewController {
                 else if(currentWaterMelon == 1){
                     currentWaterMelon-=1
                     msg.append("🍉×1")
-                }else{
+                }
+                else{
                     currentGrape-=2
                     msg.append("🍇×2")
                 }
             }
             
-            let alertController=UIAlertController(title: "专注失败", message: msg, preferredStyle: UIAlertControllerStyle.alert)
-            let okAction=UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler:nil)
+            let alertController=UIAlertController(title: "专注失败",
+                                                  message: msg, preferredStyle: UIAlertControllerStyle.alert)
+            let okAction=UIAlertAction(title: "确定",
+                                       style: UIAlertActionStyle.default, handler:nil)
             alertController.addAction(okAction)
             self.present(alertController, animated : true,completion : nil)
             
@@ -189,7 +207,8 @@ class ViewController: UIViewController {
             //log
             dataModel.saveData()
             currentTimes += 1
-            logModel.saveLog(date: startTime, getWhat: msg, isSucc: false, length: thisTime, kind: currentSeedNum)
+            logModel.saveLog(date: startTime, getWhat: msg,
+                             isSucc: false, length: thisTime, kind: currentSeedNum)
         }
     }
     
@@ -214,14 +233,16 @@ class ViewController: UIViewController {
             msg.append("🍉×1")
         }
         
-        let alertController=UIAlertController(title: "专注完成", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+        let alertController=UIAlertController(title: "专注完成",
+                                              message: msg, preferredStyle: UIAlertControllerStyle.alert)
         let okAction=UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler:nil)
         alertController.addAction(okAction)
         self.present(alertController, animated : true,completion : nil)
         //log
         dataModel.saveData()
         currentTimes += 1
-        logModel.saveLog(date: startTime, getWhat: msg, isSucc: true, length: thisTime, kind: currentSeedNum)
+        logModel.saveLog(date: startTime, getWhat: msg,
+                         isSucc: true, length: thisTime, kind: currentSeedNum)
     }
     
     //推送消息
@@ -251,31 +272,51 @@ class ViewController: UIViewController {
                 let apiKEY = "69f11f0bb83fe18a7ff855d7a4c8ba49"
                 let urlStr = "http://api.openweathermap.org/data/2.5/weather?lat=\(p.location!.coordinate.latitude)&lon=\(p.location!.coordinate.longitude)&appid=\(apiKEY)"
                 let url = NSURL(string: urlStr)!
-                guard let weatherData = NSData(contentsOf: url as URL) else { return }
-                let jsonData = try! JSON(data: weatherData as Data)
+                guard let
+                    weatherData = NSData(contentsOf: url as URL)
+                    else {
+                        return
+                    }
+                print(weatherData)
+                let jsonData : JSON
+                do {
+                    try jsonData = JSON(data: weatherData as Data)
+                }catch{
+                    print("error")
+                    return
+                }
                 let weather = jsonData["weather"][0]["main"].string!
                 print(weather)
                 switch weather {
-                case "Clear": currentWeather = 0 //晴天
+                case "Clear":
+                    currentWeather = 0 //晴天
                     break
-                case "Clouds": currentWeather = 1 
+                case "Clouds":
+                    currentWeather = 1
                     break
-                case "Rain": currentWeather = 2
+                case "Rain":
+                    currentWeather = 2
                     break
-                case "Snow": currentWeather = 2
+                case "Snow":
+                    currentWeather = 2
                     break
-                case "Wind": currentWeather = 1
+                case "Wind":
+                    currentWeather = 1
                     break
-                case "Haze": currentWeather = 0
+                case "Haze":
+                    currentWeather = 0
                     break
-                case "Mist": currentWeather = 1
+                case "Mist":
+                    currentWeather = 1
                     break
-                default: currentWeather = 0
+                default:
+                    currentWeather = 0
                     break
                 }
                 let temp = jsonData["main"]["temp"].number!
                 currentTemp = String(Int(truncating: temp) - 273) + "°C"
-            } else {
+            }
+            else {
                 currentTemp = "N/A"
                 currentWeather = 0
             }

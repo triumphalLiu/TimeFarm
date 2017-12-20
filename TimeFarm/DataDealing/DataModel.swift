@@ -74,7 +74,12 @@ class DataModel: NSObject{
         let dbexits = fileManager.fileExists(atPath: writableDBPath)
         if (dbexits != true) {
             let dbFile = Bundle.main.path(forResource: "userList", ofType: "plist")!
-            try! fileManager.copyItem(atPath: dbFile, toPath: writableDBPath)
+            do{
+                try fileManager.copyItem(atPath: dbFile, toPath: writableDBPath)
+            }
+            catch{
+                print("Error in dataFilePath")
+            }
         }
         return writableDBPath
     }

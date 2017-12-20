@@ -83,7 +83,8 @@ class ChooseCityViewController:UIViewController, CLLocationManagerDelegate{
         if (CLLocationManager.locationServicesEnabled())
         {
             locationManager.startUpdatingLocation()
-        }else{
+        }
+        else{
             LocCity = "定位失败"
         }
     }
@@ -192,7 +193,8 @@ extension ChooseCityViewController: UITableViewDelegate ,UITableViewDataSource{
                     if let url = url, UIApplication.shared.canOpenURL(url) {
                         if #available(iOS 10, *) {
                             UIApplication.shared.open(url, options: [:], completionHandler: {(success) in})
-                        } else {
+                        }
+                        else {
                             UIApplication.shared.openURL(url)
                         }
                     }
@@ -201,7 +203,8 @@ extension ChooseCityViewController: UITableViewDelegate ,UITableViewDataSource{
                 alertController.addAction(settingsAction)
                 self.present(alertController, animated : true,completion : nil)
             })
-		}else{
+		}
+        else{
 			currentCity = cell.cityNameLabel.text!
 			if(ChooseCitySearchController.isActive) {
 				self.ChooseCitySearchController.searchBar.resignFirstResponder()

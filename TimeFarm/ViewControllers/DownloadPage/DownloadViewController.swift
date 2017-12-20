@@ -17,7 +17,8 @@ class DownloadViewController : UITableViewController{
         if(downloadModel.currentFileID == -1){
             return
         }
-        let cell = self.tableView.cellForRow(at: IndexPath(row: 0, section: downloadModel.currentFileID)) as! DownloadCell
+        let cell = self.tableView.cellForRow(at: IndexPath(row: 0,
+                                                           section: downloadModel.currentFileID)) as! DownloadCell
         cell.progressBar.progress = downloadModel.progress
         if(cell.progressBar.progress >= 1.0){
             downloadModel.currentFileID = -1
@@ -31,7 +32,8 @@ class DownloadViewController : UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: #selector(tickDown1s), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(1),
+                                     target: self, selector: #selector(tickDown1s), userInfo: nil, repeats: true)
         self.tableView.rowHeight = 75
     }
     
@@ -97,12 +99,13 @@ class DownloadViewController : UITableViewController{
         if(cell.downloading == false) {
             if(cell.downloadButton.isEnabled){
                 if(downloadModel.currentFileID != -1){
-                    let alertController=UIAlertController(title: "创建任务失败", message: "当前存在下载任务，请等待结束后再下载", preferredStyle: UIAlertControllerStyle.alert)
+                    let alertController=UIAlertController(title: "创建任务失败",
+                                                          message: "当前存在下载任务，请等待结束后再下载", preferredStyle: UIAlertControllerStyle.alert)
                     let okAction=UIAlertAction(title: "好的", style: UIAlertActionStyle.default, handler:nil)
                     alertController.addAction(okAction)
                     self.present(alertController, animated : true,completion : nil)
                 }
-                    else{
+                else{
                     cell.downloadButton.titleLabel!.text = "取消"
                     downloadModel.sessionSeniorDownload(musicList[indexPath.section])
                     cell.progressBar.isHidden = false
@@ -111,7 +114,8 @@ class DownloadViewController : UITableViewController{
                 }
             }
             else{
-                let alertController = UIAlertController(title: "删除文件", message: "您确定要删除这个文件吗？", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "删除文件",
+                                                        message: "您确定要删除这个文件吗？", preferredStyle: .alert)
                 let cancelAction = UIAlertAction(title:"取消", style: .cancel, handler:nil)
                 let settingsAction = UIAlertAction(title:"删除", style: .destructive, handler: {
                     (action) -> Void in
@@ -119,7 +123,12 @@ class DownloadViewController : UITableViewController{
                     let filename = musicList[indexPath.section]
                     let path = NSHomeDirectory() + "/Documents/\(filename)"
                     print(path)
-                    try! fileManager.removeItem(atPath: path)
+                    do{
+                        try fileManager.removeItem(atPath: path)
+                    }
+                    catch{
+                        print("error in delete file of download")
+                    }
                     cell.downloadButton.isEnabled = true
                     cell.downloadButton.titleLabel?.text = "下载"
                     cell.progressBar.progress = 0.0

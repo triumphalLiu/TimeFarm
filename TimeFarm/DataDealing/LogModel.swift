@@ -24,14 +24,21 @@ class LogModel {
         let succ : String = (isSucc) ? ("1") : ("0")
         let array : NSMutableDictionary = [:]
         array.setDictionary(log)
-        array[String(currentTimes)] = [dateFormatter.string(from: date), succ, String(kind), getWhat, String(length)]
+        array[String(currentTimes)] = [dateFormatter.string(from: date),
+                                       succ, String(kind), getWhat, String(length)]
         array.write(toFile: LogPath(), atomically: true)
     }
     
     func removeLog(key : String){
         let rootDic : NSMutableDictionary! = NSMutableDictionary(contentsOfFile: LogPath())
         let path = LogPath()
-        try! fileManager.removeItem(atPath: path)
+        do{
+            try fileManager.removeItem(atPath: path)
+        }
+        catch{
+            print("error in remove log")
+            return
+        }
         fileManager.createFile(atPath: path, contents: nil, attributes: nil)
         rootDic!.removeObject(forKey: key)
         var i:Int = Int(key)!
@@ -48,12 +55,18 @@ class LogModel {
     func LogPath() -> String{
         //simulator
         //return Bundle.main.path(forResource: "historyDetail", ofType: "plist")!
-        let documentDirectory: NSArray = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray
+        let documentDirectory: NSArray = NSSearchPathForDirectoriesInDomains(
+            .documentDirectory, .userDomainMask, true) as NSArray
         let writableDBPath = (documentDirectory[0] as AnyObject).appendingPathComponent("/historyDetail") as String
         let dbexits = fileManager.fileExists(atPath: writableDBPath)
         if (dbexits != true) {
             let dbFile = Bundle.main.path(forResource: "historyDetail", ofType: "plist")!
-            try! fileManager.copyItem(atPath: dbFile, toPath: writableDBPath)
+            do{
+                try fileManager.copyItem(atPath: dbFile, toPath: writableDBPath)
+            }
+            catch{
+                print("Error in logpath")
+            }
         }
         return writableDBPath
     }

@@ -126,6 +126,7 @@
 		1851F0071FD132BE00D725B8 /* HistoryCell */ = {
 			isa = PBXGroup;
 			children = (
+				18535E661FC5B45400D2E762 /* MyHistoryViewController.swift */,
 				1851F0081FD132D900D725B8 /* HistoryRecordCell.swift */,
 			);
 			path = HistoryCell;
@@ -203,7 +204,6 @@
 				182A21F41FCD70CE0086B5CB /* ChooseCity */,
 				18535E481FC58D0F00D2E762 /* ViewController.swift */,
 				18535E641FC5B3F900D2E762 /* ChooseSeedViewController.swift */,
-				18535E661FC5B45400D2E762 /* MyHistoryViewController.swift */,
 				182DA65D1FC938C8000AAB71 /* SettingTableViewController.swift */,
 				18EC7B611FD542E200AA5023 /* GuideViewController.swift */,
 			);

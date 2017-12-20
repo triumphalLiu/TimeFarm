@@ -76,7 +76,8 @@ class DownloadModel : UIViewController, URLSessionDownloadDelegate{
         do {
             try fileManager.moveItem(atPath: locationPath, toPath: docs)
             print("new location:\(docs)")
-        } catch  {
+        }
+        catch {
             print("error")
         }
     }

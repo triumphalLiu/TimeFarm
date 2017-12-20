@@ -30,7 +30,8 @@ class GuideViewController: UIViewController, UIScrollViewDelegate {
             let imgfile = "help\(i+1).png"
             let image = UIImage(named:"\(imgfile)")
             let imgView = UIImageView(image: image)
-            imgView.frame = CGRect(x:frame.size.width * CGFloat(i), y:CGFloat(0), width:frame.size.width, height:frame.size.height)
+            imgView.frame = CGRect(x:frame.size.width * CGFloat(i), y:CGFloat(0),
+                                   width:frame.size.width, height:frame.size.height)
             scrollView.addSubview(imgView)
         }
         scrollView.contentOffset = CGPoint.zero
@@ -45,7 +46,8 @@ class GuideViewController: UIViewController, UIScrollViewDelegate {
             if (!(UserDefaults.standard.bool(forKey: "everLaunched"))){
                 self.presentingViewController!.dismiss(animated: true, completion: nil)
                 UserDefaults.standard.set(true, forKey:"everLaunched")
-            }else{
+            }
+            else{
                 self.presentingViewController!.dismiss(animated: true, completion: nil)
             }
         }
