@@ -255,6 +255,14 @@ class ViewController: UIViewController {
     //查看天气
     @IBAction func showWeather(_ sender: UIButton) {
         var content : String = ""
+        print(allWeatherInfo)
+        if(allWeatherInfo == nil){
+            ZuberAlert().showAlert(title: "网络出问题啦", subTitle: "请检查网络", buttonTitle: "确定", otherButtonTitle: nil) {
+                (OtherButton) -> Void in
+                print("OK")
+            }
+            return
+        }
         content.append("城市:\(currentCity)\n")
         content.append("详细天气:\(allWeatherInfo["weather"][0]["description"].string!)\n")
         content.append("温度:\(Int(truncating: allWeatherInfo["main"]["temp"].number!) - 273)°C\n")

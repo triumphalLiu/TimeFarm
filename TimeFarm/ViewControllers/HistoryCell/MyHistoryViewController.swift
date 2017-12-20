@@ -38,10 +38,10 @@ class MyHistoryViewController:UITableViewController{
         img.image = result
         self.view.addSubview(img)
         
-        let alertController=UIAlertController(title: "已截图", message: "截图已经保存到相册啦～", preferredStyle: UIAlertControllerStyle.alert)
-        let okAction=UIAlertAction(title: "好的", style: UIAlertActionStyle.default, handler:nil)
-        alertController.addAction(okAction)
-        self.present(alertController, animated : true,completion : nil)
+        ZuberAlert().showAlert(title: "已截图", subTitle: "截图已经保存到相册啦～", buttonTitle: "确定", otherButtonTitle: nil) {
+            (OtherButton) -> Void in
+            print("OK")
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -78,10 +78,10 @@ class MyHistoryViewController:UITableViewController{
             msg.append("种植时间：\n\(self.historyArray[keys[indexPath.section]]![0] as String)\n")
             msg.append("收成情况：\n\(self.historyArray[keys[indexPath.section]]![3] as String)\n")
             msg.append("专注时长：\n\(self.historyArray[keys[indexPath.section]]![4] as String + "分钟")\n")
-            let alertController = UIAlertController(title: "本次专注的详细情况", message: msg, preferredStyle: UIAlertControllerStyle.alert)
-            let okAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler:nil)
-            alertController.addAction(okAction)
-            self.present(alertController, animated : true,completion : nil)
+            ZuberAlert().showAlert(title: "本次专注的详细情况", subTitle: msg, buttonTitle: "确定", otherButtonTitle: nil) {
+                (OtherButton) -> Void in
+                print("OK")
+            }
         })
         let deleteAction = UIAlertAction(title: "删除", style: .destructive, handler:{
             (alerts: UIAlertAction!) ->Void in

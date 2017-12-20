@@ -185,7 +185,7 @@ extension ChooseCityViewController: UITableViewDelegate ,UITableViewDataSource{
         let cell = tableView.cellForRow(at: indexPath) as! ChooseCityTableViewCell
 		if cell.cityNameLabel.text! == "定位失败"{
 			DispatchQueue.main.async(execute: { () -> Void in
-                let alertController = UIAlertController(title: "定位功能已关闭", message: "允许获取位置可以让当前白噪音和当前城市天气保持一致哦~", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "定位功能已关闭或网络异常", message: "请检查网络连接，并允许获取位置可以让当前白噪音和当前城市天气保持一致哦~", preferredStyle: .alert)
                 let cancelAction = UIAlertAction(title:"取消", style: .cancel, handler:nil)
                 let settingsAction = UIAlertAction(title:"设置", style: .default, handler: {
                     (action) -> Void in
