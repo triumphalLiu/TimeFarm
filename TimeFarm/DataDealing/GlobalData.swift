@@ -32,10 +32,11 @@ var thisTime : Int = 0 //本次专注时间
 var startTime : Date! //开始的时间
 var lastCity : String! //上一次的城市
 
-let musicList : [String] = ["sunny.m4a", "windy.m4a", "rainy.mp3"] //TODO:下载音频文件
+let musicList : [String] = ["sunny.m4a", "windy.m4a", "rainy.m4a"] //TODO:下载音频文件
 var currentWeather : Int = 0 //当前天气 0=晴天 1=刮风 2=下雨 影响白噪声
 var currentTemp : String = "" //当前气温
 
 let dataModel : DataModel = DataModel()
 let logModel : LogModel = LogModel()
 let musicModel : MusicModel = MusicModel()
+let downloadModel : DownloadModel = DownloadModel()

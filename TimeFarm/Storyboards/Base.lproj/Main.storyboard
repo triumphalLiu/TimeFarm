@@ -470,60 +470,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="Ycj-i4-xgC">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Iww-4Y-SvP" userLabel="夜间防打扰模式">
-                                        <rect key="frame" x="0.0" y="275" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iww-4Y-SvP" id="j2N-4t-N8U">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="防打扰模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjU-7I-Ebl">
-                                                    <rect key="frame" x="8" y="0.0" width="87" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="iaz-YG-JNN"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3me-3w-dTu">
-                                                    <rect key="frame" x="297" y="6" width="51" height="31"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="31" id="zCd-Lz-FB7"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <action selector="clickNotdisturbButton:" destination="Rg3-Pp-kbp" eventType="valueChanged" id="ods-P4-yNw"/>
-                                                    </connections>
-                                                </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关闭所有振动和声音" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxd-Er-mUS">
-                                                    <rect key="frame" x="8" y="32" width="92" height="12"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="12" id="TLy-es-Z6A"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <color key="textColor" red="0.78302180040000002" green="0.78302180040000002" blue="0.78302180040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="3me-3w-dTu" secondAttribute="trailing" constant="29" id="BtP-LA-Qiv"/>
-                                                <constraint firstAttribute="bottom" secondItem="3me-3w-dTu" secondAttribute="bottom" constant="6.5" id="EPL-PQ-kpD"/>
-                                                <constraint firstItem="wjU-7I-Ebl" firstAttribute="leading" secondItem="j2N-4t-N8U" secondAttribute="leading" constant="8" id="VYh-2m-9Cn"/>
-                                                <constraint firstItem="wjU-7I-Ebl" firstAttribute="top" secondItem="j2N-4t-N8U" secondAttribute="top" id="Wpf-8H-Ahg"/>
-                                                <constraint firstItem="Cxd-Er-mUS" firstAttribute="leading" secondItem="j2N-4t-N8U" secondAttribute="leading" constant="8" id="mC6-I6-9cp"/>
-                                                <constraint firstItem="3me-3w-dTu" firstAttribute="top" secondItem="j2N-4t-N8U" secondAttribute="top" constant="6" id="oei-04-LUJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="Cxd-Er-mUS" secondAttribute="bottom" id="yYR-DM-IVD"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection id="R1m-Sf-BjN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="GO8-4h-eNs" userLabel="夜间防打扰模式">
-                                        <rect key="frame" x="0.0" y="355" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="275" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GO8-4h-eNs" id="jeC-G1-feI">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -571,6 +521,46 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="Rs5-hD-HUU">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="cI0-NF-nxb" userLabel="下载">
+                                        <rect key="frame" x="0.0" y="355" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cI0-NF-nxb" id="adg-ro-Hdh">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下载白噪声" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIy-Ud-1xK">
+                                                    <rect key="frame" x="8" y="0.0" width="333" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="Ax7-T8-9ju"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXh-qb-fWe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+                                                    <connections>
+                                                        <action selector="openDownloadPage:" destination="Rg3-Pp-kbp" eventType="touchUpInside" id="rbc-YN-edg"/>
+                                                        <segue destination="yAh-bu-mxB" kind="show" id="VU6-sz-nY2"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="sXh-qb-fWe" secondAttribute="trailing" id="9J1-0q-5vX"/>
+                                                <constraint firstAttribute="trailing" secondItem="CIy-Ud-1xK" secondAttribute="trailing" id="JKi-Ie-EVL"/>
+                                                <constraint firstItem="sXh-qb-fWe" firstAttribute="leading" secondItem="adg-ro-Hdh" secondAttribute="leading" id="L8e-Pz-AU6"/>
+                                                <constraint firstItem="CIy-Ud-1xK" firstAttribute="top" secondItem="adg-ro-Hdh" secondAttribute="top" id="PK8-9L-OaB"/>
+                                                <constraint firstAttribute="bottom" secondItem="sXh-qb-fWe" secondAttribute="bottom" id="Wbd-b1-jHu"/>
+                                                <constraint firstItem="sXh-qb-fWe" firstAttribute="top" secondItem="adg-ro-Hdh" secondAttribute="top" id="aC4-FW-cmV"/>
+                                                <constraint firstItem="CIy-Ud-1xK" firstAttribute="leading" secondItem="adg-ro-Hdh" secondAttribute="leading" constant="8" id="f8G-Yo-TxZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="CIy-Ud-1xK" secondAttribute="bottom" id="g5X-xN-AGe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection id="83b-gE-fVL">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="OZf-yQ-8M6" userLabel="关于">
@@ -593,6 +583,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
                                                     <connections>
                                                         <action selector="clickHelpAndAboutButton:" destination="Rg3-Pp-kbp" eventType="touchUpInside" id="a5z-bC-Sob"/>
+                                                        <action selector="openDownloadPage:" destination="Rg3-Pp-kbp" eventType="touchUpInside" id="gDD-wu-Qq0"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -621,7 +612,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cityLabel" destination="Mb5-rU-Bbe" id="2jo-8d-992"/>
-                        <outlet property="notdisturbButton" destination="3me-3w-dTu" id="dyx-Si-z73"/>
                         <outlet property="pauseButton" destination="m15-T0-sRS" id="NRJ-Ab-uxi"/>
                         <outlet property="playSwitch" destination="3Xf-LH-LmF" id="MLd-6V-mWI"/>
                         <outlet property="timeTextField" destination="Faa-1B-G34" id="bgr-ea-KEz"/>
@@ -630,6 +620,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ied-uj-8in" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="301.60000000000002" y="-692.20389805097454"/>
+        </scene>
+        <!--下载白噪音-->
+        <scene sceneID="19k-yr-x9f">
+            <objects>
+                <tableViewController id="yAh-bu-mxB" customClass="DownloadViewController" customModule="TimeFarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DownloadCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OyR-DL-ePK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DownloadCell" id="n8L-5h-Bhf" customClass="DownloadCell" customModule="TimeFarm" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n8L-5h-Bhf" id="AQB-Am-uyA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KV-Zx-8rZ">
+                                            <rect key="frame" x="8" y="0.0" width="42" height="26"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O2j-yz-qLr">
+                                            <rect key="frame" x="8" y="34" width="351" height="2"/>
+                                        </progressView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqG-un-vbU">
+                                            <rect key="frame" x="328" y="1" width="31" height="32"/>
+                                            <state key="normal" title="下载"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfE-0R-gO3">
+                                            <rect key="frame" x="271" y="3" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="nqG-un-vbU" secondAttribute="trailing" constant="16" id="1sC-zq-aaL"/>
+                                        <constraint firstItem="WfE-0R-gO3" firstAttribute="top" secondItem="AQB-Am-uyA" secondAttribute="top" constant="3" id="Dra-jy-T0s"/>
+                                        <constraint firstItem="nqG-un-vbU" firstAttribute="top" secondItem="AQB-Am-uyA" secondAttribute="top" constant="1" id="M33-AN-pLU"/>
+                                        <constraint firstItem="O2j-yz-qLr" firstAttribute="top" secondItem="nqG-un-vbU" secondAttribute="bottom" constant="1" id="WDV-Sy-Tna"/>
+                                        <constraint firstItem="O2j-yz-qLr" firstAttribute="top" secondItem="WfE-0R-gO3" secondAttribute="bottom" constant="10" id="Zq8-fk-kqG"/>
+                                        <constraint firstItem="O2j-yz-qLr" firstAttribute="top" secondItem="5KV-Zx-8rZ" secondAttribute="bottom" constant="8" id="fKx-P4-97v"/>
+                                        <constraint firstAttribute="trailing" secondItem="O2j-yz-qLr" secondAttribute="trailing" constant="16" id="hST-5A-TfJ"/>
+                                        <constraint firstItem="O2j-yz-qLr" firstAttribute="leading" secondItem="AQB-Am-uyA" secondAttribute="leading" constant="8" id="hxq-c4-Ask"/>
+                                        <constraint firstAttribute="bottom" secondItem="O2j-yz-qLr" secondAttribute="bottom" constant="7.5" id="jA7-rg-VTz"/>
+                                        <constraint firstItem="nqG-un-vbU" firstAttribute="leading" secondItem="WfE-0R-gO3" secondAttribute="trailing" constant="15" id="kFK-Xd-ZiE"/>
+                                        <constraint firstItem="5KV-Zx-8rZ" firstAttribute="top" secondItem="AQB-Am-uyA" secondAttribute="top" id="q1h-bF-PGV"/>
+                                        <constraint firstItem="5KV-Zx-8rZ" firstAttribute="leading" secondItem="AQB-Am-uyA" secondAttribute="leading" constant="8" id="sPg-V4-o9B"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="downloadButton" destination="nqG-un-vbU" id="ct9-IY-J6g"/>
+                                    <outlet property="nameLabel" destination="5KV-Zx-8rZ" id="psC-If-QQ2"/>
+                                    <outlet property="progressBar" destination="O2j-yz-qLr" id="yD5-mW-sXc"/>
+                                    <outlet property="sizeLabel" destination="WfE-0R-gO3" id="qoK-qn-1AA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yAh-bu-mxB" id="mpe-Fq-djl"/>
+                            <outlet property="delegate" destination="yAh-bu-mxB" id="4hG-1G-MTb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="下载白噪音" largeTitleDisplayMode="never" id="6ms-Ba-sVW" userLabel="下载白噪音"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydh-Sc-77v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="-383.65817091454278"/>
         </scene>
         <!--城市列表-->
         <scene sceneID="53T-gm-P6c">

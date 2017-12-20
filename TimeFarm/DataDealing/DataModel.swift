@@ -35,21 +35,29 @@ class DataModel: NSObject{
         let dic = NSDictionary(contentsOfFile: dataFilePath()) as! [String: String]
         for(key, value) in dic{
             switch key{
-            case "tomatoTime": tomatoTime = Int(value)!
+            case "tomatoTime":
+                tomatoTime = Int(value)!
                 break
-            case "currentCity": currentCity = value
+            case "currentCity":
+                currentCity = value
                 break
-            case "currentSeedNum": currentSeedNum = Int(value)!
+            case "currentSeedNum":
+                currentSeedNum = Int(value)!
                 break
-            case "currentTomato": currentTomato = Int(value)!
+            case "currentTomato":
+                currentTomato = Int(value)!
                 break
-            case "currentGrape": currentGrape = Int(value)!
+            case "currentGrape":
+                currentGrape = Int(value)!
                 break
-            case "currentWaterMelon": currentWaterMelon = Int(value)!
+            case "currentWaterMelon":
+                currentWaterMelon = Int(value)!
                 break
-            case "currentTimes": currentTimes = Int(value)!
+            case "currentTimes":
+                currentTimes = Int(value)!
                 break
-            case "isPlaySound": isPlaySound = Int(value)!
+            case "isPlaySound":
+                isPlaySound = Int(value)!
                 break
             default:
                 break

@@ -29,6 +29,18 @@ class MusicModel{
     
     //路径
     func musicPath(which: Int) -> String{
-        return Bundle.main.path(forResource: musicList[which], ofType: "")!
+        if(isFileExist(musicList[which])){
+            return NSHomeDirectory() + "/Documents/\(musicList[which])"
+        }else{
+            return ""
+        }
+        
+    }
+    
+    func isFileExist(_ filename : String) -> Bool {
+        let fileManager = FileManager()
+        let docs : String = NSHomeDirectory() + "/Documents/\(filename)"
+        let dbexits : Bool = fileManager.fileExists(atPath: docs)
+        return dbexits
     }
 }

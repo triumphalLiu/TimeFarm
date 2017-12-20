@@ -28,13 +28,17 @@ class SettingTableViewController:UITableViewController{
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         timeTextField.text = String(tomatoTime) + "分钟"
         cityLabel.text = currentCity
-        notdisturbButton.isOn = isNotDisturb
         pauseButton.isOn = isPaused
         if(isPlaySound == 0){
             playSwitch.isOn = false
         }else{
             playSwitch.isOn = true
         }
+    }
+    
+    //单击打开下载页面
+    @IBAction func openDownloadPage(_ sender: UIButton) {
+        
     }
     
     //单击选择时间事件

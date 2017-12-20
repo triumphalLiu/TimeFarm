@@ -77,8 +77,8 @@ class ChooseCityViewController:UIViewController, CLLocationManagerDelegate{
     //获取位置
     private func getLocation() {
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = 100
+        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+        locationManager.distanceFilter = 1000
         locationManager.requestAlwaysAuthorization()
         if (CLLocationManager.locationServicesEnabled())
         {

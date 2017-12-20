@@ -29,8 +29,19 @@ class MyHistoryViewController:UITableViewController{
     }
     
     @IBAction func clickShare(_ sender: UIBarButtonItem) {
-        let image = getScreenShot()
-        //TODO:通过微信api分享到好友或朋友圈
+        let result = getScreenShot()
+        print(result)
+        let height : CGFloat = 150
+        let pop : CGFloat = UIScreen.main.bounds.width / UIScreen.main.bounds.height
+        let width : CGFloat = pop * height
+        let img = UIImageView(frame: CGRect(x: 20, y: UIScreen.main.bounds.height - height - 100, width: width, height: height))
+        img.image = result
+        self.view.addSubview(img)
+        
+        let alertController=UIAlertController(title: "已截图", message: "截图已经保存到相册啦～", preferredStyle: UIAlertControllerStyle.alert)
+        let okAction=UIAlertAction(title: "好的", style: UIAlertActionStyle.default, handler:nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated : true,completion : nil)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

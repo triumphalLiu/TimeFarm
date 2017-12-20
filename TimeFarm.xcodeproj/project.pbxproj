@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18040C151FEA32F600DBDF67 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18040C141FEA32F600DBDF67 /* DownloadCell.swift */; };
+		18040C171FEA3C4200DBDF67 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18040C161FEA3C4200DBDF67 /* DownloadViewController.swift */; };
 		182414C21FC959A0008BD2CF /* ChooseCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182414C11FC959A0008BD2CF /* ChooseCityViewController.swift */; };
 		182DA65E1FC938C8000AAB71 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DA65D1FC938C8000AAB71 /* SettingTableViewController.swift */; };
 		182DA6671FC9544A000AAB71 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DA6631FC9540E000AAB71 /* back.png */; };
@@ -35,6 +37,7 @@
 		18BA9D091FCEA4B00038F228 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA9D081FCEA4B00038F228 /* DataModel.swift */; };
 		18BA9D0B1FCEACA70038F228 /* userList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BA9D0A1FCEACA70038F228 /* userList.plist */; };
 		18C610961FCA9D1A0008C96B /* ChooseCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C610951FCA9D1A0008C96B /* ChooseCityTableViewCell.swift */; };
+		18E3534E1FEA22B200A1E58D /* DownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3534D1FEA22B200A1E58D /* DownloadModel.swift */; };
 		18E364C61FD4F6AB003B9325 /* grape_dead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E364C31FD4F6AB003B9325 /* grape_dead.jpg */; };
 		18E364C71FD4F6AB003B9325 /* tomato_dead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E364C41FD4F6AB003B9325 /* tomato_dead.jpg */; };
 		18E364C81FD4F6AB003B9325 /* watermelon_dead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E364C51FD4F6AB003B9325 /* watermelon_dead.jpg */; };
@@ -42,13 +45,12 @@
 		18E753CA1FCFDD5B00453629 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E753C91FCFDD5B00453629 /* UserNotifications.framework */; };
 		18EC7B581FD516A400AA5023 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC7B571FD516A400AA5023 /* SwiftyJSON.swift */; };
 		18EC7B5A1FD52E1800AA5023 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC7B591FD52E1800AA5023 /* MusicModel.swift */; };
-		18EC7B5E1FD537AC00AA5023 /* sunny.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 18EC7B5B1FD537AC00AA5023 /* sunny.m4a */; };
-		18EC7B5F1FD537AD00AA5023 /* windy.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 18EC7B5C1FD537AC00AA5023 /* windy.m4a */; };
-		18EC7B601FD537AD00AA5023 /* rainy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18EC7B5D1FD537AC00AA5023 /* rainy.mp3 */; };
 		18EC7B621FD542E200AA5023 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC7B611FD542E200AA5023 /* GuideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18040C141FEA32F600DBDF67 /* DownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
+		18040C161FEA3C4200DBDF67 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
 		182414BF1FC9594F008BD2CF /* cities.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
 		182414C11FC959A0008BD2CF /* ChooseCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityViewController.swift; sourceTree = "<group>"; };
 		182DA65D1FC938C8000AAB71 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
@@ -80,15 +82,13 @@
 		18BA9D081FCEA4B00038F228 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		18BA9D0A1FCEACA70038F228 /* userList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = userList.plist; sourceTree = "<group>"; };
 		18C610951FCA9D1A0008C96B /* ChooseCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityTableViewCell.swift; sourceTree = "<group>"; };
+		18E3534D1FEA22B200A1E58D /* DownloadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadModel.swift; sourceTree = "<group>"; };
 		18E364C31FD4F6AB003B9325 /* grape_dead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grape_dead.jpg; sourceTree = "<group>"; };
 		18E364C41FD4F6AB003B9325 /* tomato_dead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomato_dead.jpg; sourceTree = "<group>"; };
 		18E364C51FD4F6AB003B9325 /* watermelon_dead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = watermelon_dead.jpg; sourceTree = "<group>"; };
 		18E753C91FCFDD5B00453629 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		18EC7B571FD516A400AA5023 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		18EC7B591FD52E1800AA5023 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
-		18EC7B5B1FD537AC00AA5023 /* sunny.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = sunny.m4a; sourceTree = "<group>"; };
-		18EC7B5C1FD537AC00AA5023 /* windy.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = windy.m4a; sourceTree = "<group>"; };
-		18EC7B5D1FD537AC00AA5023 /* rainy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rainy.mp3; sourceTree = "<group>"; };
 		18EC7B611FD542E200AA5023 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18040C131FEA317200DBDF67 /* DownloadPage */ = {
+			isa = PBXGroup;
+			children = (
+				18040C141FEA32F600DBDF67 /* DownloadCell.swift */,
+				18040C161FEA3C4200DBDF67 /* DownloadViewController.swift */,
+			);
+			path = DownloadPage;
+			sourceTree = "<group>";
+		};
 		182A21F41FCD70CE0086B5CB /* ChooseCity */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,12 +172,9 @@
 				182DA66D1FC9573E000AAB71 /* grape.png */,
 				182DA66E1FC9573F000AAB71 /* watermelon.png */,
 				18535E601FC599FA00D2E762 /* settingIcon.png */,
-				18EC7B5D1FD537AC00AA5023 /* rainy.mp3 */,
-				18EC7B5B1FD537AC00AA5023 /* sunny.m4a */,
 				187ED2321FD7E0130024B785 /* help1.png */,
 				187ED2341FD7E0130024B785 /* help2.png */,
 				187ED2331FD7E0130024B785 /* help3.png */,
-				18EC7B5C1FD537AC00AA5023 /* windy.m4a */,
 				18BA9D031FCE9C450038F228 /* launchScreen.jpg */,
 				18E364C31FD4F6AB003B9325 /* grape_dead.jpg */,
 				18E364C41FD4F6AB003B9325 /* tomato_dead.jpg */,
@@ -192,6 +198,7 @@
 		18BA9D051FCEA3E90038F228 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				18040C131FEA317200DBDF67 /* DownloadPage */,
 				1851F0071FD132BE00D725B8 /* HistoryCell */,
 				182A21F41FCD70CE0086B5CB /* ChooseCity */,
 				18535E481FC58D0F00D2E762 /* ViewController.swift */,
@@ -211,6 +218,7 @@
 				18EC7B571FD516A400AA5023 /* SwiftyJSON.swift */,
 				1851F0051FD12BDD00D725B8 /* LogModel.swift */,
 				18EC7B591FD52E1800AA5023 /* MusicModel.swift */,
+				18E3534D1FEA22B200A1E58D /* DownloadModel.swift */,
 			);
 			path = DataDealing;
 			sourceTree = "<group>";
@@ -294,19 +302,16 @@
 				182DA6701FC95749000AAB71 /* watermelon.png in Resources */,
 				182DA66F1FC95745000AAB71 /* grape.png in Resources */,
 				18E364C81FD4F6AB003B9325 /* watermelon_dead.jpg in Resources */,
-				18EC7B5E1FD537AC00AA5023 /* sunny.m4a in Resources */,
 				187ED2371FD7E0130024B785 /* help2.png in Resources */,
 				182DA66C1FC955B3000AAB71 /* tomato.png in Resources */,
 				182DA6681FC9544E000AAB71 /* next.png in Resources */,
 				182DA6671FC9544A000AAB71 /* back.png in Resources */,
 				18535E611FC59A0000D2E762 /* settingIcon.png in Resources */,
 				187ED2361FD7E0130024B785 /* help3.png in Resources */,
-				18EC7B5F1FD537AD00AA5023 /* windy.m4a in Resources */,
 				18E364C61FD4F6AB003B9325 /* grape_dead.jpg in Resources */,
 				187ED2351FD7E0130024B785 /* help1.png in Resources */,
 				18535E5F1FC595B500D2E762 /* background.jpeg in Resources */,
 				1851F00D1FD13AA000D725B8 /* historyDetail.plist in Resources */,
-				18EC7B601FD537AD00AA5023 /* rainy.mp3 in Resources */,
 				18535E511FC58D0F00D2E762 /* LaunchScreen.storyboard in Resources */,
 				18535E4E1FC58D0F00D2E762 /* Assets.xcassets in Resources */,
 				18535E4C1FC58D0F00D2E762 /* Main.storyboard in Resources */,
@@ -321,8 +326,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18040C151FEA32F600DBDF67 /* DownloadCell.swift in Sources */,
 				182DA65E1FC938C8000AAB71 /* SettingTableViewController.swift in Sources */,
 				1851F0091FD132D900D725B8 /* HistoryRecordCell.swift in Sources */,
+				18E3534E1FEA22B200A1E58D /* DownloadModel.swift in Sources */,
+				18040C171FEA3C4200DBDF67 /* DownloadViewController.swift in Sources */,
 				182414C21FC959A0008BD2CF /* ChooseCityViewController.swift in Sources */,
 				18EC7B621FD542E200AA5023 /* GuideViewController.swift in Sources */,
 				18EC7B581FD516A400AA5023 /* SwiftyJSON.swift in Sources */,
