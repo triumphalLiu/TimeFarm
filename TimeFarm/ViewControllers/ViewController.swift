@@ -47,8 +47,6 @@ class ViewController: UIViewController {
         discountTimer = Timer.scheduledTimer(timeInterval: TimeInterval(1),
                                              target: self, selector: #selector(tickDown1s), userInfo: nil, repeats: true)
         askForNotification()
-        //更新天气
-        loadWeather()
     }
 
     override func didReceiveMemoryWarning() {
@@ -298,6 +296,7 @@ class ViewController: UIViewController {
                     print("error")
                     return
                 }
+                print(jsonData)
                 let weather = jsonData["weather"][0]["main"].string!
                 print(weather)
                 switch weather {
