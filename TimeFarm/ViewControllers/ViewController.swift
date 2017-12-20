@@ -257,6 +257,21 @@ class ViewController: UIViewController {
         UNUserNotificationCenter.current().add(request) { error in}
     }
     
+    //查看天气
+    @IBAction func showWeather(_ sender: UIButton) {
+        var content : String = ""
+        content.append("城市:\(currentCity)\n")
+        content.append("详细天气:\(allWeatherInfo["weather"][0]["description"].string!)\n")
+        content.append("温度:\(Int(truncating: allWeatherInfo["main"]["temp"].number!) - 273)°C\n")
+        content.append("湿度:\(allWeatherInfo["main"]["humidity"].number!)%\n")
+        content.append("气压:\(allWeatherInfo["main"]["pressure"].number!)hPa\n")
+        content.append("风速:\(allWeatherInfo["wind"]["speed"].number!)m/s\n")
+        ZuberAlert().showAlert(title: "天气详情", subTitle: content, buttonTitle: "确定", otherButtonTitle: "复制") {
+            (OtherButton) -> Void in
+            print("OK")
+        }
+    }
+    
     //加载天气
     private func loadWeather() {
         let geocoder = CLGeocoder()
@@ -281,6 +296,7 @@ class ViewController: UIViewController {
                 let jsonData : JSON
                 do {
                     try jsonData = JSON(data: weatherData as Data)
+                    allWeatherInfo = jsonData
                 }catch{
                     print("error")
                     return

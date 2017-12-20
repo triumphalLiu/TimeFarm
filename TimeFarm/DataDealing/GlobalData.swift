@@ -35,6 +35,7 @@ var lastCity : String! //上一次的城市
 let musicList : [String] = ["sunny.m4a", "windy.m4a", "rainy.m4a"] //TODO:下载音频文件
 var currentWeather : Int = 0 //当前天气 0=晴天 1=刮风 2=下雨 影响白噪声
 var currentTemp : String = "" //当前气温
+var allWeatherInfo : JSON!
 
 let dataModel : DataModel = DataModel()
 let logModel : LogModel = LogModel()

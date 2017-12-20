@@ -37,6 +37,8 @@
 		18BA9D091FCEA4B00038F228 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA9D081FCEA4B00038F228 /* DataModel.swift */; };
 		18BA9D0B1FCEACA70038F228 /* userList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BA9D0A1FCEACA70038F228 /* userList.plist */; };
 		18C610961FCA9D1A0008C96B /* ChooseCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C610951FCA9D1A0008C96B /* ChooseCityTableViewCell.swift */; };
+		18D1F7791FEA874E009F0088 /* WeatherAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1F7781FEA874E009F0088 /* WeatherAlertViewController.swift */; };
+		18D1F77C1FEA881B009F0088 /* weather.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D1F77B1FEA881B009F0088 /* weather.png */; };
 		18E3534E1FEA22B200A1E58D /* DownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3534D1FEA22B200A1E58D /* DownloadModel.swift */; };
 		18E364C61FD4F6AB003B9325 /* grape_dead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E364C31FD4F6AB003B9325 /* grape_dead.jpg */; };
 		18E364C71FD4F6AB003B9325 /* tomato_dead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E364C41FD4F6AB003B9325 /* tomato_dead.jpg */; };
@@ -82,6 +84,8 @@
 		18BA9D081FCEA4B00038F228 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		18BA9D0A1FCEACA70038F228 /* userList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = userList.plist; sourceTree = "<group>"; };
 		18C610951FCA9D1A0008C96B /* ChooseCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityTableViewCell.swift; sourceTree = "<group>"; };
+		18D1F7781FEA874E009F0088 /* WeatherAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAlertViewController.swift; sourceTree = "<group>"; };
+		18D1F77B1FEA881B009F0088 /* weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather.png; sourceTree = "<group>"; };
 		18E3534D1FEA22B200A1E58D /* DownloadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadModel.swift; sourceTree = "<group>"; };
 		18E364C31FD4F6AB003B9325 /* grape_dead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grape_dead.jpg; sourceTree = "<group>"; };
 		18E364C41FD4F6AB003B9325 /* tomato_dead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomato_dead.jpg; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 		18535E5C1FC5938E00D2E762 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				18D1F77B1FEA881B009F0088 /* weather.png */,
 				182414BF1FC9594F008BD2CF /* cities.plist */,
 				182DA6631FC9540E000AAB71 /* back.png */,
 				182DA6641FC9540E000AAB71 /* next.png */,
@@ -199,6 +204,7 @@
 		18BA9D051FCEA3E90038F228 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				18D1F77A1FEA8755009F0088 /* WeatherView */,
 				18040C131FEA317200DBDF67 /* DownloadPage */,
 				1851F0071FD132BE00D725B8 /* HistoryCell */,
 				182A21F41FCD70CE0086B5CB /* ChooseCity */,
@@ -230,6 +236,14 @@
 				18535E4F1FC58D0F00D2E762 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		18D1F77A1FEA8755009F0088 /* WeatherView */ = {
+			isa = PBXGroup;
+			children = (
+				18D1F7781FEA874E009F0088 /* WeatherAlertViewController.swift */,
+			);
+			path = WeatherView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +314,7 @@
 				18E364C71FD4F6AB003B9325 /* tomato_dead.jpg in Resources */,
 				18BA9D041FCE9C4A0038F228 /* launchScreen.jpg in Resources */,
 				182DA6701FC95749000AAB71 /* watermelon.png in Resources */,
+				18D1F77C1FEA881B009F0088 /* weather.png in Resources */,
 				182DA66F1FC95745000AAB71 /* grape.png in Resources */,
 				18E364C81FD4F6AB003B9325 /* watermelon_dead.jpg in Resources */,
 				187ED2371FD7E0130024B785 /* help2.png in Resources */,
@@ -326,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D1F7791FEA874E009F0088 /* WeatherAlertViewController.swift in Sources */,
 				18040C151FEA32F600DBDF67 /* DownloadCell.swift in Sources */,
 				182DA65E1FC938C8000AAB71 /* SettingTableViewController.swift in Sources */,
 				1851F0091FD132D900D725B8 /* HistoryRecordCell.swift in Sources */,

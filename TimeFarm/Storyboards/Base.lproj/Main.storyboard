@@ -80,12 +80,24 @@
                                     <segue destination="NtS-cj-gBx" kind="show" id="opX-PT-psA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7b-lA-B65">
+                                <rect key="frame" x="327" y="71" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="0ND-tb-kUW"/>
+                                    <constraint firstAttribute="height" constant="32" id="owP-dd-Ivg"/>
+                                </constraints>
+                                <state key="normal" image="weather.png"/>
+                                <connections>
+                                    <action selector="showWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="esT-Ty-39l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Sf-GZ-2XO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2lM-PA-EA6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CYx-wY-URX" secondAttribute="bottom" priority="750" constant="331" id="4Yr-Jn-Ifs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3aD-bk-fsd" secondAttribute="trailing" constant="119" id="6zm-gT-9LO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I7b-lA-B65" secondAttribute="trailing" constant="16" id="7Zh-GI-nrg"/>
                             <constraint firstItem="pa0-4A-K57" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9t3-Rs-8pJ"/>
                             <constraint firstItem="CYx-wY-URX" firstAttribute="top" secondItem="6Sf-GZ-2XO" secondAttribute="bottom" constant="26" id="AVQ-1F-OsG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3aD-bk-fsd" secondAttribute="bottom" constant="90" id="BTl-YI-Hxv"/>
@@ -97,6 +109,7 @@
                             <constraint firstItem="EFc-cv-hLB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="Scy-Jw-rG9"/>
                             <constraint firstItem="EFc-cv-hLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" multiplier="0.0700001" constant="7" id="bwB-DG-eAM"/>
                             <constraint firstItem="3aD-bk-fsd" firstAttribute="top" secondItem="CYx-wY-URX" secondAttribute="bottom" constant="90" id="eZU-KU-rJg"/>
+                            <constraint firstItem="I7b-lA-B65" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="hKT-36-N1H"/>
                             <constraint firstItem="6Sf-GZ-2XO" firstAttribute="top" secondItem="EFc-cv-hLB" secondAttribute="bottom" priority="500" constant="104" id="hzB-On-Sqw"/>
                             <constraint firstItem="pa0-4A-K57" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nDl-NJ-5MB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Sf-GZ-2XO" secondAttribute="trailing" id="unz-5U-d9Z"/>
@@ -759,5 +772,6 @@
         <image name="next.png" width="200" height="200"/>
         <image name="settingIcon.png" width="200" height="200"/>
         <image name="tomato.png" width="200" height="200"/>
+        <image name="weather.png" width="200" height="200"/>
     </resources>
 </document>
