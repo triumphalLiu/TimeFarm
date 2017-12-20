@@ -518,7 +518,6 @@
                                                         <constraint firstAttribute="height" constant="31" id="k72-el-uiR"/>
                                                     </constraints>
                                                     <connections>
-                                                        <action selector="clickNotdisturbButton:" destination="Rg3-Pp-kbp" eventType="valueChanged" id="wWC-7B-dbc"/>
                                                         <action selector="clickPlaySound:" destination="Rg3-Pp-kbp" eventType="valueChanged" id="CUR-nJ-wFL"/>
                                                     </connections>
                                                 </switch>

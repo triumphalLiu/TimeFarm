@@ -196,12 +196,10 @@ class ViewController: UIViewController {
                 }
             }
             
-            let alertController=UIAlertController(title: "专注失败",
-                                                  message: msg, preferredStyle: UIAlertControllerStyle.alert)
-            let okAction=UIAlertAction(title: "确定",
-                                       style: UIAlertActionStyle.default, handler:nil)
-            alertController.addAction(okAction)
-            self.present(alertController, animated : true,completion : nil)
+            ZuberAlert().showAlert(title: "专注失败", subTitle: msg, buttonTitle: "确定", otherButtonTitle: nil) {
+                (OtherButton) -> Void in
+                print("OK")
+            }
             
             pushNotification(title: "专注失败", body: "由于你的不专心，作物已经死亡。")
             //log
@@ -233,11 +231,10 @@ class ViewController: UIViewController {
             msg.append("🍉×1")
         }
         
-        let alertController=UIAlertController(title: "专注完成",
-                                              message: msg, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction=UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler:nil)
-        alertController.addAction(okAction)
-        self.present(alertController, animated : true,completion : nil)
+        ZuberAlert().showAlert(title: "专注成功", subTitle: msg, buttonTitle: "确定", otherButtonTitle: nil) {
+            (OtherButton) -> Void in
+            print("OK")
+        }
         //log
         dataModel.saveData()
         currentTimes += 1
