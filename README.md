@@ -46,4 +46,4 @@ TimeFarm是一款通过在一定的时间内保持专注，以种植作物。利
 - 如有意见或建议欢迎交流:<liu@triumphal.cn>
 ***
 ## 应用截图（最新的版本界面有所优化，请进入应用内查看~）
-![应用截图](https://raw.githubusercontent.com/triumphalLiu/TimeFarm/master/Screenshot.png "应用截图")
+![应用截图](http://chuantu.biz/t6/191/1514650638x-1566657727.png "应用截图")
