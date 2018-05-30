@@ -38,12 +38,19 @@ TimeFarm是一款通过在一定的时间内保持专注，以种植作物。利
 - 如果想看看具体内容，可以选择查看详情
 - 右上角提供了分享按钮，会将当前截图保存在相册中~
 - __一开始想通过微信的开放平台进行分享，结果审核没有通过...于是退一步使用截图工具作为分享功能__
+
+***
+## 鸣谢/Refers
+ZuberAlert工具，链接：https://github.com/smalldu/ZuberAlert  
+JSON处理，链接：https://github.com/johnezang/JSONKit
+
 ***
 ## 结束语
 - 应用开发过程还是很有趣的，特别是发现问题解决问题之后的成就感很让人满足。
 - 上这门课学到了很多知识，更重要的是了解了iOS应用的架构和原理，移动应用提供的功能很多、发展很快，需要探索的地方还有很多。
 - 以及，**写应用同时也要会Photoshop啊...**
 - 如有意见或建议欢迎交流:<liu@triumphal.cn>
+
 ***
-## 应用截图（最新的版本界面有所优化，请进入应用内查看~）
-![应用截图](http://chuantu.biz/t6/191/1514650638x-1566657727.png "应用截图")
+## 应用截图（最新的版本界面有所优化，请进入应用内查看~）  
+![应用截图](https://github.com/triumphalLiu/TimeFarm/blob/master/TimeFarm/src/example.png "应用截图")
